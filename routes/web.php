@@ -18,6 +18,13 @@ use Illuminate\Support\Facades\Route;
 //});
 
 
+Route::group(['prefix' => 'dashboard'], function () {
+    Route::get('/', [\App\Http\Controllers\Admin\MainAdminController::class, 'index'])->name('dashboard');
+    Route::get('/main', [\App\Http\Controllers\Admin\MainAdminController::class, 'main'])->name('main');
+});
+
+
+
 Route::get('/', [\App\Http\Controllers\FrontPageController::class,'index'])->name('index');
 Route::get('/contact', [\App\Http\Controllers\FrontPageController::class,'contact'])->name('contact');
 Route::get('/error', [\App\Http\Controllers\FrontPageController::class,'error'])->name('error');
@@ -44,3 +51,7 @@ Route::get('/sign-in', [\App\Http\Controllers\FrontPageController::class,'signin
 Route::post('/project-mail', [\App\Http\Controllers\MailController::class,'projectMail'])->name('project.mail');
 Route::post('/contact-mail', [\App\Http\Controllers\MailController::class,'contactMail'])->name('contact.mail');
 Route::post('/apply-job', [\App\Http\Controllers\MailController::class,'applyJob'])->name('applyjob.mail');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
