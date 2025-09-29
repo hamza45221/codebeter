@@ -20,8 +20,39 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'dashboard'], function () {
     Route::get('/', [\App\Http\Controllers\Admin\MainAdminController::class, 'index'])->name('dashboard');
-    Route::get('/main', [\App\Http\Controllers\Admin\MainAdminController::class, 'main'])->name('main');
+
+
+    Route::group(['prefix' => 'main'], function () {
+        Route::get('/', [\App\Http\Controllers\Admin\MainAdminController::class, 'main'])->name('main');
+        Route::post('/store', [\App\Http\Controllers\Admin\MainAdminController::class, 'store'])->name('main.store');
+    });
+
+    Route::group(['prefix' => 'reviews'], function () {
+        Route::get('/', [\App\Http\Controllers\Admin\ReviewsController::class, 'index'])->name('reviews');
+        Route::post('/store', [\App\Http\Controllers\Admin\ReviewsController::class, 'store'])->name('reviews.store');
+        Route::post('/update/{id}', [\App\Http\Controllers\Admin\ReviewsController::class, 'update'])->name('reviews.update');
+        Route::get('/delete/{id}', [\App\Http\Controllers\Admin\ReviewsController::class, 'delete'])->name('reviews.delete');
+    });
+
+
+
+    Route::group(['prefix' => 'portfolio'], function () {
+        Route::get('/', [\App\Http\Controllers\Admin\PortfolioController::class, 'index'])->name('portfolio.index');
+        Route::post('/store', [\App\Http\Controllers\Admin\PortfolioController::class, 'store'])->name('portfolio.store');
+        Route::post('/update/{id}', [\App\Http\Controllers\Admin\PortfolioController::class, 'update'])->name('portfolio.update');
+        Route::get('/delete/{id}', [\App\Http\Controllers\Admin\PortfolioController::class, 'delete'])->name('portfolio.delete');
+    });
+
+
+    Route::group(['prefix' => 'contact'], function () {
+        Route::get('/', [\App\Http\Controllers\Admin\ContactUsController::class, 'index'])->name('contactus');
+        Route::post('/store', [\App\Http\Controllers\Admin\ContactUsController::class, 'store'])->name('contactus.store');
+    });
+
+
 });
+
+
 
 
 

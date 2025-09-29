@@ -17,5 +17,9 @@ class DatabaseSeeder extends Seeder
 
         $this->call(UserTableSeed::class);
         $this->call(MainTableSeed::class);
+        $this->call(ReviewTableSeed::class);
+        $this->call(ContactUsTableSeed::class);
+        $this->call(PortfolioTableSeed::class);
+        $this->call(AboutTableSeed::class);
     }
 }

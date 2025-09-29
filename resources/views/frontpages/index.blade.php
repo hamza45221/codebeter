@@ -396,8 +396,8 @@ Services START -->
 
                         <!-- Buttons -->
                         <div class="d-flex gap-3 flex-wrap">
-                            <a href="about-v2.html" class="btn btn-primary mb-0">Learn more</a>
-                            <a href="contact-us-v1.html" class="link-primary-grad icon-link icon-link-hover">Schedule a consultation <i class="bi bi-arrow-right"></i></a>
+                            <a href="{{ route('about') }}" class="btn btn-primary mb-0">Learn more</a>
+                            <a href="{{ route('contact') }}" class="link-primary-grad icon-link icon-link-hover">Schedule a consultation <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
 

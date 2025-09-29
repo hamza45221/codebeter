@@ -64,6 +64,11 @@
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{ asset('admin/assets/js/config.js')}}"></script>
 
+
+    <!-- Line Awesome (for la la-trash, la la-plus icons) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" rel="stylesheet"/>
+
+
     <style>
         .app-brand-logo {
             width: 190px !important;
@@ -81,6 +86,12 @@
         /*    border-color:#009366 !important;*/
         /*    box-shadow:0 -4.875rem 0.375rem 0 rgb(0, 147, 102);*/
         /*}*/
+
+         label {
+             font-weight: 700;
+             margin-top:3px;
+             margin-bottom: 3px;
+         }
     </style>
 </head>
 
@@ -94,7 +105,7 @@
             <div class="app-brand demo mt-3 mb-5">
                 <a href="#" class="app-brand-link">
                 <span class="app-brand-logo demo" >
-                    <img src="{{ asset('admin/assets/img/TaxiLinks.png')}}" width="200px" alt="Taxi-Link Logo"/>
+                    <img src="{{ asset('assets/images/codebeter horizontal logo-sm.png')}}" width="180px" alt="Taxi-Link Logo"/>
                 </span>
                     {{--                  <span class="app-brand-text demo menu-text fw-bold"></span>--}}
                 </a>
@@ -125,7 +136,31 @@
                     </a>
                 </li>
 
-{{--                @endif--}}
+
+                <li class="menu-item {{ Route::is('reviews') ? 'active' : '' }}">
+                    <a href="{{ route('reviews') }}" class="menu-link">
+                        <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                        <div data-i18n="Reviews">Reviews</div>
+                    </a>
+                </li>
+
+
+
+                <li class="menu-item {{ Route::is('contactus') ? 'active' : '' }}">
+                    <a href="{{ route('contactus') }}" class="menu-link">
+                        <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                        <div data-i18n="Contact Us">Contact Us</div>
+                    </a>
+                </li>
+
+                <li class="menu-item {{ Route::is('portfolio.index') ? 'active' : '' }}">
+                    <a href="{{ route('portfolio.index') }}" class="menu-link">
+                        <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                        <div data-i18n="Portfolio">Portfolio</div>
+                    </a>
+                </li>
+
+                {{--                @endif--}}
 
 
             </ul>

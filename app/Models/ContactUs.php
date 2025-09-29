@@ -5,16 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Main extends Model
+class ContactUs extends Model
 {
     use HasFactory;
-
-
-    public $casts = [
-        'happy_clients_img' => 'array',
-        'client_slider_imgs' => 'array',
-        'about_list' => 'array',
-    ];
 
     protected $guarded = [];
 }
