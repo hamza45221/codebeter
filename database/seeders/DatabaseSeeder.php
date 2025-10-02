@@ -21,5 +21,8 @@ class DatabaseSeeder extends Seeder
         $this->call(ContactUsTableSeed::class);
         $this->call(PortfolioTableSeed::class);
         $this->call(AboutTableSeed::class);
+        $this->call(TeamTableSeed::class);
+        $this->call(CarrerTableSeed::class);
+        $this->call(JobTableSeed::class);
     }
 }

@@ -17,10 +17,10 @@ Hero START -->
                 <div class="row">
                     <div class="col-md-6 pe-3">
                         <!-- Pre title -->
-                        <p class="heading-color bg-secondary d-inline-block rounded px-3 py-2 mb-3"><span class="badge bg-dark me-2">New</span> Maximize productivity with next-generation software</p>
+                        <p class="heading-color bg-secondary d-inline-block rounded px-3 py-2 mb-3"><span class="badge bg-dark me-2">New</span> {{ $main->tag_line }}</p>
 
                         <!-- Title -->
-                        <h1 class=" mb-4 " >Building Reliable Website or Software That Drives your <br>
+                        <h1 class=" mb-4 " >{{ $main->hero_heading }}<br>
                             <span class="text-primary ityped-cursor-opacity mb-0 d-block d-xxl-inline-block">
 					<span class="typed" data-type-text="business&&agency&&startup"></span>
                         </span>
@@ -29,7 +29,7 @@ Hero START -->
                         <!-- Button and info -->
                         <div class="d-flex gap-3 gap-sm-4 flex-wrap">
                             <!-- Button -->
-                            <a href="https://wa.me/923291070012" class="btn btn-primary-grad px-3"> <i class="bi bi-whatsapp me-2"></i> 03291070012 </a>
+                            <a href="https://wa.me/923291070012" class="btn btn-primary-grad px-3"> <i class="bi bi-whatsapp me-2"></i> {{ $main->whatsapp_num }} </a>
 
                             <!-- Info -->
                             <div class="d-flex gap-2 align-items-center">
@@ -47,7 +47,7 @@ Hero START -->
                                         <img class="avatar-img rounded-circle" src="{{ asset('assets/images/client/human4.jpg') }}" alt="avatar">
                                     </li>
                                 </ul>
-                                <p class="heading-color mb-0">30+ happy clients</p>
+                                <p class="heading-color mb-0">{{ $main->happy_clients }}</p>
                             </div>
                         </div>
 
@@ -55,8 +55,8 @@ Hero START -->
                     <div class="col-md-6">
                         <div class="hero-video mt-5">
                             <video width="100%" class="rounded-3" height="100%"  muted autoplay="autoplay" loop>
-                                <source src="{{ asset('assets/video/her-vid.mp4') }}" type="video/mp4">
-                                <source src="{{ asset('assets/video/her-vid.mp4') }}" type="video/webm">
+                                <source src="{{ asset($main->hero_video) }}" type="video/mp4">
+                                <source src="{{ asset($main->hero_video) }}" type="video/webm">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -100,7 +100,7 @@ Image and client START -->
                         <div class="col-sm-5">
                             <div class="card card-body p-0 h-100">
                                 <!-- Image -->
-                                <img src="{{ asset('assets/images/bg/02.jpg') }}" alt="">
+                                <img src="{{ asset($main->call_sec_person_img) }}" alt="">
 
                                 <!-- Actions -->
                                 <div class="card-img-overlay d-flex flex-column">
@@ -113,7 +113,7 @@ Image and client START -->
                                         </li>
 
                                         <!-- Video Call (Zoom link or similar) -->
-                                        <a href="https://meet.google.com/your-meeting-code" target="_blank" class="btn btn-lg btn-success btn-icon rounded-circle mb-0" type="button">
+                                        <a href="{{ $main->google_meet_link }}" target="_blank" class="btn btn-lg btn-success btn-icon rounded-circle mb-0" type="button">
                                             <i class="bi bi-camera-video fa-sm"></i>
                                         </a>
 
@@ -131,7 +131,7 @@ Image and client START -->
 
                         <!-- Code image -->
                         <div class="col-sm-7">
-                            <div class="h-100" style="background:url(assets/images/bg/code.jpg) no-repeat; background-size:cover; background-position:left top;"></div>
+                            <div class="h-100" style="background:url({{ $main->call_sec_code_img }}) no-repeat; background-size:cover; background-position:left top;"></div>
                         </div>
                     </div>
                 </div>
@@ -252,7 +252,7 @@ Services START -->
             <div class="container position-relative">
                 <!-- Title -->
                 <div class="inner-container-small text-center mb-6 mb-lg-7">
-                    <h2 class="mb-0">Our expert services</h2>
+                    <h2 class="mb-0">{{ $main->services_title }}</h2>
                 </div>
 
                 <!-- Services START -->
@@ -384,8 +384,8 @@ Services START -->
                 <div class="row g-4">
                     <!-- Title and contents -->
                     <div class="col-lg-5">
-                        <h2 class="mb-2 mb-lg-4">Leading the future of software innovation</h2>
-                        <p class="mb-2 mb-lg-4">Our expert team is dedicated to understanding your unique needs and delivering solutions that exceed expectations.</p>
+                        <h2 class="mb-2 mb-lg-4">{{ $main->about_title }}</h2>
+                        <p class="mb-2 mb-lg-4">{{ $main->about_desc }}</p>
 
                         <!-- List -->
                         <ul class="list-group list-group-borderless mb-3 mb-lg-4">
@@ -396,8 +396,8 @@ Services START -->
 
                         <!-- Buttons -->
                         <div class="d-flex gap-3 flex-wrap">
-                            <a href="{{ route('about') }}" class="btn btn-primary mb-0">Learn more</a>
-                            <a href="{{ route('contact') }}" class="link-primary-grad icon-link icon-link-hover">Schedule a consultation <i class="bi bi-arrow-right"></i></a>
+                            <a href="{{ route('about') }}" class="btn btn-primary mb-0">{{ $main->about_more_btn_name }}</a>
+                            <a href="{{ route('contact') }}" class="link-primary-grad icon-link icon-link-hover">{{ $main->consultation_btn_name }} <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
 
@@ -414,7 +414,7 @@ Services START -->
                         </div>
 
                         <!-- Main image -->
-                        <img src="assets/images/about/04.jpg" class="rounded-4 position-relative z-index-2" alt="about image">
+                        <img src="{{ $main->about_main_img }}" class="rounded-4 position-relative z-index-2" alt="about image">
                     </div>
 
                 </div>
@@ -428,7 +428,7 @@ About END -->
             <div class="container  card-grid">
                 <!-- Title and button -->
                 <div class="d-md-flex justify-content-between align-items-center text-center text-sm-start mb-4 mb-md-5">
-                    <h2 class="mb-3 mb-md-0">Our latest projects</h2>
+                    <h2 class="mb-3 mb-md-0">{{ $main->projects_title }}</h2>
                     <a href="{{ route('portfolio') }}" class="btn btn-primary-grad mb-0">Explore portfolio</a>
                 </div>
 
@@ -552,12 +552,12 @@ Video START -->
                 <!-- Title -->
                 <div class="row mb-4 mb-md-6">
                     <div class="col-md-6">
-                        <h2 class="text-white mb-0">Achieving mastery in every phase of our methodology.</h2>
+                        <h2 class="text-white mb-0">{{ $main->methodology_title }}</h2>
                     </div>
                 </div>
 
                 <!-- Video section -->
-                <div class="bg-parallax position-relative h-400px h-xl-500px rounded-4 overflow-hidden" style="background:url(assets/images/achivement.jpg) no-repeat; background-size:cover; background-position:center;">
+                <div class="bg-parallax position-relative h-400px h-xl-500px rounded-4 overflow-hidden" style="background:url({{ $main->methodology_bg_image }}) no-repeat; background-size:cover; background-position:center;">
                     <!-- BG overlay -->
                     <div class="bg-overlay bg-purple opacity-1"></div>
                     <!-- Play button -->
@@ -592,7 +592,7 @@ Testimonials START -->
                 <!-- Title -->
                 <div class="row align-items-center mb-4 mb-md-5">
                     <div class="col-md-7 col-lg-5">
-                        <h2 class="mb-0">What our clients say</h2>
+                        <h2 class="mb-0">{{ $main->clients_say_title }}</h2>
                     </div>
 
                     <div class="col-md-5 ms-sm-auto text-sm-end mt-5 mt-sm-0">
@@ -619,7 +619,9 @@ Testimonials START -->
 
                     <div class="swiper-wrapper">
                         <!-- Testimonials item -->
+                        @foreach($review as $r)
                         <div class="swiper-slide">
+
                             <div class="card bg-secondary bg-opacity-50 bg-blur rounded-4 p-4 h-100">
                                 <!-- Card body -->
                                 <div class="card-body p-0 mb-4">
@@ -633,7 +635,7 @@ Testimonials START -->
                                     </ul>
                                     <!-- Testimonials text -->
                                     <blockquote>
-                                        <p class="heading-color mb-0">Outstanding service and top-quality software solutions! The team was professional, responsive, and delivered exactly what we needed on time.</p>
+                                        <p class="heading-color mb-0">{{ $r->description }}</p>
                                     </blockquote>
                                 </div>
                                 <!-- Card footer -->
@@ -641,152 +643,20 @@ Testimonials START -->
                                     <!-- Testimonials info -->
                                     <div class="d-flex align-items-center">
                                         <div class="avatar flex-shrink-0">
-                                            <img class="avatar-img rounded-circle" src="{{ asset('assets/images/client/huaman1.jpg') }}" alt="avatar">
+                                            <img class="avatar-img rounded-circle" src="{{ asset($r->image) }}" alt="avatar">
                                         </div>
                                         <div class="ms-3">
-                                            <p class="lead heading-color fw-semibold mb-0">Jacqueline Miller</p>
+                                            <p class="lead heading-color fw-semibold mb-0">{{ $r->name }}</p>
 {{--                                            <small>Product designer</small>--}}
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Testimonials item -->
-                        <div class="swiper-slide">
-                            <div class="card bg-secondary bg-opacity-50 bg-blur rounded-4 p-4 h-100">
-                                <!-- Card body -->
-                                <div class="card-body p-0 mb-4">
-                                    <!-- Rating star -->
-                                    <ul class="list-inline mb-3">
-                                        <li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
-                                    </ul>
-                                    <!-- Testimonials text -->
-                                    <blockquote>
-                                        <p class="heading-color mb-0">Exceptional expertise and attention to detail. Our project was completed flawlessly, and communication was seamless throughout</p>
-                                    </blockquote>
-                                </div>
-                                <!-- Card footer -->
-                                <div class="card-footer bg-transparent p-0">
-                                    <!-- Testimonials info -->
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar flex-shrink-0">
-                                            <img class="avatar-img rounded-circle" src="{{ asset('assets/images/client/human2.jpg') }}" alt="avatar">
-                                        </div>
-                                        <div class="ms-3">
-                                            <p class="lead heading-color fw-semibold mb-0">Louis Ferguson</p>
-{{--                                            <small>Web Developer</small>--}}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
+                        @endforeach
 
-                        <!-- Testimonials item -->
-                        <div class="swiper-slide">
-                            <div class="card bg-secondary bg-opacity-50 bg-blur rounded-4 p-4 h-100">
-                                <!-- Card body -->
-                                <div class="card-body p-0 mb-4">
-                                    <!-- Rating star -->
-                                    <ul class="list-inline mb-3">
-                                        <li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="bi bi-star-half text-warning"></i></li>
-                                    </ul>
-                                    <!-- Testimonials text -->
-                                    <blockquote>
-                                        <p class="heading-color mb-0">Highly skilled and reliable agency. They exceeded expectations and delivered a fantastic software solution within the agreed timeframe.</p>
-                                    </blockquote>
-                                </div>
-                                <!-- Card footer -->
-                                <div class="card-footer bg-transparent p-0">
-                                    <!-- Testimonials info -->
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar flex-shrink-0">
-                                            <img class="avatar-img rounded-circle" src="{{ asset('assets/images/client/human6.jpg') }}" alt="avatar">
-                                        </div>
-                                        <div class="ms-3">
-                                            <p class="lead heading-color fw-semibold mb-0">Evelyn</p>
-{{--                                            <small>UI/UX designer</small>--}}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Testimonials item -->
-                        <div class="swiper-slide">
-                            <div class="card bg-secondary bg-opacity-50 bg-blur rounded-4 p-4 h-100">
-                                <!-- Card body -->
-                                <div class="card-body p-0 mb-4">
-                                    <!-- Rating star -->
-                                    <ul class="list-inline mb-3">
-                                        <li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="bi bi-star-half text-warning"></i></li>
-                                    </ul>
-                                    <!-- Testimonials text -->
-                                    <blockquote>
-                                        <p class="heading-color mb-0">Great experience working with this company. They were responsive, professional, and delivered exactly what we needed for our software project</p>
-                                    </blockquote>
-                                </div>
-                                <!-- Card footer -->
-                                <div class="card-footer bg-transparent p-0">
-                                    <!-- Testimonials info -->
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar flex-shrink-0">
-                                            <img class="avatar-img rounded-circle" src="{{ asset('assets/images/client/human5.jpg') }}" alt="avatar">
-                                        </div>
-                                        <div class="ms-3">
-                                            <p class="lead heading-color fw-semibold mb-0">Allen Smith</p>
-{{--                                            <small>Manager</small>--}}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Testimonials item -->
-                        <div class="swiper-slide">
-                            <div class="card bg-secondary bg-opacity-50 bg-blur rounded-4 p-4 h-100">
-                                <!-- Card body -->
-                                <div class="card-body p-0 mb-4">
-                                    <!-- Rating star -->
-                                    <ul class="list-inline mb-3">
-                                        <li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="bi bi-star-half text-warning"></i></li>
-                                    </ul>
-                                    <!-- Testimonials text -->
-                                    <blockquote>
-                                        <p class="heading-color mb-0">Was out laughter raptures returned outweigh. Luckily cheered colonel I do we attack highest enabled. Tried law yet style child. The bore of true of no be deal.</p>
-                                    </blockquote>
-                                </div>
-                                <!-- Card footer -->
-                                <div class="card-footer bg-transparent p-0">
-                                    <!-- Testimonials info -->
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar flex-shrink-0">
-                                            <img class="avatar-img rounded-circle" src="{{ asset('assets/images/client/human7.jpg') }}" alt="avatar">
-                                        </div>
-                                        <div class="ms-3">
-                                            <p class="lead heading-color fw-semibold mb-0">Emma Watson</p>
-{{--                                            <small>UI/UX designer</small>--}}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <!-- Testimonials END -->
@@ -1028,17 +898,17 @@ CTA START -->
                         <div class="card bg-primary-grad h-100 overflow-hidden">
                             <!-- Image -->
                             <div class="position-absolute end-0 top-0 me-n8 d-none d-sm-block">
-                                <img src="{{ asset('assets/images/elements/person-laptop.png') }}" alt="">
+                                <img src="{{ asset($main->opportunities_img) }}" alt="">
                             </div>
 
                             <div class="row align-items-center p-3 ">
                                 <!-- Title and content -->
                                 <div class="col-sm-8">
                                     <div class="card-body  text-white">
-                                        <p>Apply to work with us</p>
-                                        <h4 class="mb-5 text-white">Explore Career Opportunities</h4>
+                                        <p>{{ $main->opportunities_sub_title }}</p>
+                                        <h4 class="mb-5 text-white">{{ $main->opportunities_title }}</h4>
                                         <a class="btn btn-sm btn-dark icon-link icon-link-hover" href="{{ route('carrer') }}">View open positions<i class="bi bi-arrow-right"></i> </a>
-                                        <p class="small mb-0">2 jobs are available</p>
+                                        <p class="small mb-0">2 {{ $main->jobs_avaliable }}</p>
                                     </div>
                                 </div>
                             </div>

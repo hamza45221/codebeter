@@ -28,6 +28,8 @@ Portfolio START -->
             <div class="container">
 
                 <div class="row justify-content-center mb-6">
+
+                    @if()
                     <div class="col-md-5">
                         <div class="card card-img-scale card-content-hover rounded-0 bg-transparent overflow-hidden">
                             <div class="card-img-scale-wrapper rounded-0">
@@ -48,7 +50,7 @@ Portfolio START -->
                             </div>
                         </div>
                     </div>
-
+                    @else
                     <div class="col-md-6 d-flex align-items-center">
                         <div class="row justify-content-center mt-5 mt-md-0">
                             <div class="col-md-8">
@@ -73,81 +75,9 @@ Portfolio START -->
                             </div>
                         </div>
                     </div>
+                    @endif
 
-                    <div class="col-md-6 d-flex align-items-center">
-                        <div class="row justify-content-center mt-5 mt-md-6">
-                            <div class="col-md-11 col-lg-9">
-                                <div class="card card-img-scale card-content-hover rounded-0 bg-transparent overflow-hidden">
-                                    <div class="card-img-scale-wrapper rounded-0">
-                                        <!-- Card Image -->
-                                        <img src="{{ asset('assets/images/portfolio/pro4.jpg') }}" class="img-scale" alt="portfolio-img">
-                                        <!-- Arrow button -->
-                                        <div class="card-img-overlay hover-content d-flex flex-column align-items-center justify-content-center p-5">
-                                            <div class="icon-xl bg-dark text-white rounded-circle"><i class="bi bi-arrow-up-right"></i></div>
-                                        </div>
-                                    </div>
-                                    <!-- Card body -->
-                                    <div class="card-body d-flex justify-content-between px-0 pb-0">
-                                        <div>
-                                            <h6 class="mb-0"><a href="http://railoriginal.codebeter.com" target="_blank" class="heading-color stretched-link">RailOrignal</a></h6>
-{{--                                            <span>Logo design</span>--}}
-                                        </div>
-                                        <small>@2025</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-md-6 d-flex align-items-center">
-                        <div class="row justify-content-center mt-5 mt-md-6">
-                            <div class="col-md-11 col-lg-9">
-                                <div class="card card-img-scale card-content-hover rounded-0 bg-transparent overflow-hidden">
-                                    <div class="card-img-scale-wrapper rounded-0">
-                                        <!-- Card Image -->
-                                        <img src="{{ asset('assets/images/portfolio/pro3.jpg') }}" class="img-scale" alt="portfolio-img">
-                                        <!-- Arrow button -->
-                                        <div class="card-img-overlay hover-content d-flex flex-column align-items-center justify-content-center p-5">
-                                            <div class="icon-xl bg-dark text-white rounded-circle"><i class="bi bi-arrow-up-right"></i></div>
-                                        </div>
-                                    </div>
-                                    <!-- Card body -->
-                                    <div class="card-body d-flex justify-content-between px-0 pb-0">
-                                        <div>
-                                            <h6 class="mb-0"><a href="http://business-brokers.codebeter.com" target="_blank" class="heading-color stretched-link">Business Brokers</a></h6>
-{{--                                            <span>E-commerce</span>--}}
-                                        </div>
-                                        <small>@2025</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 d-flex align-items-center">
-                        <div class="row justify-content-center mt-5 mt-md-6">
-                            <div class="col-md-11 col-lg-9">
-                                <div class="card card-img-scale card-content-hover rounded-0 bg-transparent overflow-hidden">
-                                    <div class="card-img-scale-wrapper rounded-0">
-                                        <!-- Card Image -->
-                                        <img src="{{ asset('assets/images/portfolio/pro2.jpg') }}" class="img-scale" alt="portfolio-img">
-                                        <!-- Arrow button -->
-                                        <div class="card-img-overlay hover-content d-flex flex-column align-items-center justify-content-center p-5">
-                                            <div class="icon-xl bg-dark text-white rounded-circle"><i class="bi bi-arrow-up-right"></i></div>
-                                        </div>
-                                    </div>
-                                    <!-- Card body -->
-                                    <div class="card-body d-flex justify-content-between px-0 pb-0">
-                                        <div>
-                                            <h6 class="mb-0"><a href="http://jobportal.codebeter.com" target="_blank" class="heading-color stretched-link">Jobportal</a></h6>
-{{--                                            <span>Animation</span>--}}
-                                        </div>
-                                        <small>@2025</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
 {{--                    <div class="col-md-6 d-flex align-items-center">--}}
 {{--                        <div class="row justify-content-center mt-5 mt-md-6">--}}

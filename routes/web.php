@@ -50,6 +50,33 @@ Route::group(['prefix' => 'dashboard'], function () {
     });
 
 
+    Route::group(['prefix' => 'about'], function () {
+        Route::get('/', [\App\Http\Controllers\Admin\AboutController::class, 'index'])->name('admin.about');
+        Route::post('/store', [\App\Http\Controllers\Admin\AboutController::class, 'store'])->name('about.store');
+    });
+
+
+    Route::group(['prefix' => 'carrer'], function () {
+        Route::get('/', [\App\Http\Controllers\Admin\CarrerController::class, 'index'])->name('admin.carrer');
+        Route::post('/store', [\App\Http\Controllers\Admin\CarrerController::class, 'store'])->name('carrer.store');
+    });
+
+
+    Route::group(['prefix' => 'team'], function () {
+        Route::get('/', [\App\Http\Controllers\Admin\TeamController::class, 'index'])->name('admin.team');
+        Route::post('/store', [\App\Http\Controllers\Admin\TeamController::class, 'store'])->name('team.store');
+        Route::post('/update/{id}', [\App\Http\Controllers\Admin\TeamController::class, 'update'])->name('team.update');
+        Route::get('/delete/{id}', [\App\Http\Controllers\Admin\TeamController::class, 'delete'])->name('team.delete');
+    });
+
+
+    Route::group(['prefix' => 'job'], function () {
+        Route::get('/', [\App\Http\Controllers\Admin\JobController::class, 'index'])->name('admin.job');
+        Route::post('/store', [\App\Http\Controllers\Admin\JobController::class, 'store'])->name('job.store');
+        Route::post('/update/{id}', [\App\Http\Controllers\Admin\JobController::class, 'update'])->name('job.update');
+        Route::get('/delete/{id}', [\App\Http\Controllers\Admin\JobController::class, 'delete'])->name('job.delete');
+    });
+
 });
 
 

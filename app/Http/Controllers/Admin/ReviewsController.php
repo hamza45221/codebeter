@@ -25,11 +25,11 @@ class ReviewsController extends Controller
         $review->description = $request->description ;
 
         if ($request->hasFile('image')) {
-            $review->image ='storage/'. $request->file('image')->store('reviews/images', 'public');
+            $review->image ='storage/'. $request->file('image')->store('uploads', 'public');
         }
 
         if ($request->hasFile('video')) {
-            $review->video ='storage/'. $request->file('video')->store('reviews/videos', 'public');
+            $review->video ='storage/'. $request->file('video')->store('uploads', 'public');
         }
 
         $review->save();

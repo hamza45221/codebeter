@@ -160,6 +160,38 @@
                     </a>
                 </li>
 
+
+                <li class="menu-item {{ Route::is('admin.about') ? 'active' : '' }}">
+                    <a href="{{ route('admin.about') }}" class="menu-link">
+                        <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                        <div data-i18n="About">About</div>
+                    </a>
+                </li>
+
+
+                <li class="menu-item {{ Route::is('admin.team') ? 'active' : '' }}">
+                    <a href="{{ route('admin.team') }}" class="menu-link">
+                        <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                        <div data-i18n="Team">Team</div>
+                    </a>
+                </li>
+
+
+                <li class="menu-item {{ Route::is('admin.carrer') ? 'active' : '' }}">
+                    <a href="{{ route('admin.carrer') }}" class="menu-link">
+                        <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                        <div data-i18n="Carrer">Carrer</div>
+                    </a>
+                </li>
+
+
+                <li class="menu-item {{ Route::is('admin.job') ? 'active' : '' }}">
+                    <a href="{{ route('admin.job') }}" class="menu-link">
+                        <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                        <div data-i18n="Job">Job</div>
+                    </a>
+                </li>
+
                 {{--                @endif--}}
 
 

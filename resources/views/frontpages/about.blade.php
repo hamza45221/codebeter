@@ -53,7 +53,7 @@ Hero START -->
 {{--                    </nav>--}}
 
                     <!-- Title -->
-                    <h1 class="display-5 mb-4">Doing the <span class="text-primary-grad">Right Thing,</span> at the  <span class="text-primary-grad"> Right Time </span>  </h1>
+                    <h1 class="display-5 mb-4">{{ $about->title1 }} <span class="text-primary-grad">{{ $about->title2 }}</span> {{ $about->title3 }}  <span class="text-primary-grad"> {{ $about->title4 }} </span>  </h1>
 
                     <!-- Buttons -->
                     <div class="d-md-flex justify-content-center align-items-center py-2">
@@ -76,11 +76,11 @@ Hero START -->
                         <div class="card bg-body bg-opacity-50 bg-blur rounded-4 h-100 p-3">
                             <!-- Card header -->
                             <div class="card-header bg-transparent">
-                                <p class="heading-color">Including users on all of our 2024 platforms</p>
+                                <p class="heading-color">{{ $about->user_title }}</p>
                             </div>
                             <!-- Card footer -->
                             <div class="card-footer bg-transparent d-flex mt-auto">
-                                <h4 class="purecounter h2 mb-0" data-purecounter-start="0" data-purecounter-end="70" data-purecounter-delay="300">0</h4>
+                                <h4 class="purecounter h2 mb-0" data-purecounter-start="0" data-purecounter-end="{{$about->user_count}}" data-purecounter-delay="300">0</h4>
                                 <span class="h2 text-primary mb-0">+</span>
                             </div>
                         </div>
@@ -91,12 +91,12 @@ Hero START -->
                         <div class="card bg-body bg-opacity-50 bg-blur rounded-4 h-100 p-3">
                             <!-- Card header -->
                             <div class="card-header bg-transparent ">
-                                <p class="heading-color">Successful projects</p>
+                                <p class="heading-color">{{ $about->project_title }}</p>
                             </div>
                             <!-- Card footer -->
                             <div class="card-footer bg-transparent d-flex mt-auto">
                                 <span class="text-success mb-0"><i class="bi bi-arrow-up"></i></span>
-                                <h4 class="purecounter h2 mb-0" data-purecounter-start="0" data-purecounter-end="50" data-purecounter-delay="300">0</h4>
+                                <h4 class="purecounter h2 mb-0" data-purecounter-start="0" data-purecounter-end="{{ $about->project_count }}" data-purecounter-delay="300">0</h4>
                                 <span class="h2 text-primary mb-0">+</span>
                             </div>
                         </div>
@@ -107,11 +107,11 @@ Hero START -->
                         <div class="card bg-body bg-opacity-50 bg-blur rounded-4 h-100 p-3">
                             <!-- Card header -->
                             <div class="card-header bg-transparent ">
-                                <p class="heading-color">Team members</p>
+                                <p class="heading-color">{{ $about->members_title }}</p>
                             </div>
                             <!-- Card footer -->
                             <div class="card-footer bg-transparent d-flex mt-auto">
-                                <h4 class="purecounter h2 mb-0" data-purecounter-start="0" data-purecounter-end="10" data-purecounter-delay="300">0</h4>
+                                <h4 class="purecounter h2 mb-0" data-purecounter-start="0" data-purecounter-end="{{ $about->members_count }}" data-purecounter-delay="300">0</h4>
                                 <span class="h2 text-primary mb-0">+</span>
                             </div>
                         </div>
@@ -122,11 +122,11 @@ Hero START -->
                         <div class="card bg-body bg-opacity-50 bg-blur rounded-4 h-100 p-3">
                             <!-- Card header -->
                             <div class="card-header bg-transparent">
-                                <p class="heading-color">Customer Satisfaction</p>
+                                <p class="heading-color">{{ $about->satisfaction_title }}</p>
                             </div>
                             <!-- Card footer -->
                             <div class="card-footer bg-transparent d-flex mt-auto">
-                                <h4 class="purecounter h2 mb-0" data-purecounter-start="0" data-purecounter-end="99" data-purecounter-delay="300">0</h4>
+                                <h4 class="purecounter h2 mb-0" data-purecounter-start="0" data-purecounter-end="{{ $about->satisfaction_count }}" data-purecounter-delay="300">0</h4>
                                 <span class="h2 text-primary mb-0">%</span>
                             </div>
                         </div>
@@ -159,20 +159,20 @@ About START -->
                                 <!-- Images -->
                                 <div class="row position-relative">
                                     <div class="col-sm-6">
-                                        <img src="{{ asset('assets/images/about/about1.jpg') }}" class="rounded-4" alt="">
+                                        <img src="{{ asset($about->about_image1) }}" class="rounded-4" alt="">
                                     </div>
                                     <div class="col-sm-6 mt-5 mt-sm-8">
-                                        <img src="{{ asset('assets/images/about/about2.jpg') }}" class="rounded-4" alt="">
+                                        <img src="{{ asset($about->about_image2) }}" class="rounded-4" alt="">
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Content -->
                             <div class="col-md-5">
-                                <h2 class="mb-3">Crafting Exceptional Web Experiences for Your Business</h2>
+                                <h2 class="mb-3">{{ $about->heading }}</h2>
 
                                 <p>
-                                    our team builds eye-catching, high-speed digital experiences that help your brand stand out from the crowd. by mixing creative flair, fresh ideas, and solid tech know-how, we guide you confidently through web design, development, and savvy online marketing.
+                                    {{ $about->description }}
                                 </p>
 
                                 <a class="btn btn-primary icon-link icon-link-hover mt-3" href="{{ route('portfolio') }}">Explore our work<i class="bi bi-arrow-right"></i> </a>
@@ -184,17 +184,17 @@ About START -->
                         <div class="row g-4 g-lg-5">
                             <!-- Feature item -->
                             <div class="col-md-4">
-                                <h4>Your Reliable Adviser in the Changing Digital Environment</h4>
+                                <h4>{{ $about->adviser_heading }}</h4>
                             </div>
                             <div class="col-md-4">
-                                <h6 class="mb-2"><i class="bi bi-lightning-charge-fill text-success me-2"></i>Our mission</h6>
-                                <p>We exist to guide your online journey, staying next to you as the digital world keeps changing. By crafting fresh web solutions, we lift your brand and help turn visits into real success.</p>
+                                <h6 class="mb-2"><i class="bi bi-lightning-charge-fill text-success me-2"></i>{{ $about->our_mission_title }}</h6>
+                                <p>{{ $about->our_mission_description }}</p>
                             </div>
 
                             <!-- Feature item -->
                             <div class="col-md-4">
-                                <h6 class="mb-2"><i class="bi bi-rocket-takeoff-fill text-pink me-2"></i>Our vision</h6>
-                                <p>In addition to creating aesthetically beautiful websites, our vision also includes creating user experiences that are consistent with your brand identity.</p>
+                                <h6 class="mb-2"><i class="bi bi-rocket-takeoff-fill text-pink me-2"></i>{{ $about->our_vision_title }}</h6>
+                                <p>{{ $about->our_vision_description }}</p>
                             </div>
 
                         </div>
@@ -236,34 +236,34 @@ Team START -->
 
                     <div class="container position-relative">
                         <!-- Title -->
-                        <h1 class="text-center mb-2">Get to know our professionals.</h1>
-                        <p class="text-center mb-4 mb-md-6">Our dedicated team is passionate about delivering exceptional results that exceed your expectations.</p>
+                        <h1 class="text-center mb-2">{{ $about->our_professionals_heading }}</h1>
+                        <p class="text-center mb-4 mb-md-6">{{ $about->our_professionals_desc }}</p>
 
 
                         <div class="row g-4 g-sm-5 justify-content-center align-items-center">
                             <!-- Team item -->
-                            <div class="col-sm-6 col-md-5 col-lg-4">
-                                <div class="card  card-img-scale card-content-hover shadow rounded-top-pill  overflow-hidden">
-                                    <div class="card-img-scale-wrapper">
-                                        <!-- Social links -->
-                                        <div class="hover-content h-100">
-                                            <ul class="list-group list-group-borderless position-absolute bottom-0 end-0 me-3 mb-3">
-                                                <li class="list-group-item pb-0"> <a class="btn btn-sm btn-round bg-facebook d-flex justify-content-center align-items-center" href="https://www.facebook.com/share/16vC5D5U3t/"><i class="bi bi-facebook"></i></a> </li>
-                                                <li class="list-group-item pb-0"> <a class="btn btn-sm btn-round bg-linkedin d-flex justify-content-center align-items-center" href="www.linkedin.com/in/hamza-javed-dev"><i class="bi bi-linkedin"></i></a> </li>
-                                            </ul>
-                                        </div>
-                                        <!-- Card Image -->
-                                        <img src="{{ asset('assets/images/about/found.jpg') }}" class="card-img-top img-scale" alt="card image">
-                                    </div>
+{{--                            <div class="col-sm-6 col-md-5 col-lg-4">--}}
+{{--                                <div class="card  card-img-scale card-content-hover shadow rounded-top-pill  overflow-hidden">--}}
+{{--                                    <div class="card-img-scale-wrapper">--}}
+{{--                                        <!-- Social links -->--}}
+{{--                                        <div class="hover-content h-100">--}}
+{{--                                            <ul class="list-group list-group-borderless position-absolute bottom-0 end-0 me-3 mb-3">--}}
+{{--                                                <li class="list-group-item pb-0"> <a class="btn btn-sm btn-round bg-facebook d-flex justify-content-center align-items-center" href="https://www.facebook.com/share/16vC5D5U3t/"><i class="bi bi-facebook"></i></a> </li>--}}
+{{--                                                <li class="list-group-item pb-0"> <a class="btn btn-sm btn-round bg-linkedin d-flex justify-content-center align-items-center" href="www.linkedin.com/in/hamza-javed-dev"><i class="bi bi-linkedin"></i></a> </li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                        <!-- Card Image -->--}}
+{{--                                        <img src="{{ asset('assets/images/about/found.jpg') }}" class="card-img-top img-scale" alt="card image">--}}
+{{--                                    </div>--}}
 
-                                    <!-- Card body -->
-                                    <div class="card-body teams-member-desc text-center px-0">
-                                        <h6 class="mb-0">Hamza Javed</h6>
-                                        <small class="text-light">Founder & CEO</small>
-                                        <p class="py-3 px-2"> With 4 years of coding experience, this tech enthusiast is leading our company's journey with creativity and knowledge. devoted to creating a changing technology environment.</p>
-                                    </div>
-                                </div>
-                            </div>
+{{--                                    <!-- Card body -->--}}
+{{--                                    <div class="card-body teams-member-desc text-center px-0">--}}
+{{--                                        <h6 class="mb-0">Hamza Javed</h6>--}}
+{{--                                        <small class="text-light">Founder & CEO</small>--}}
+{{--                                        <p class="py-3 px-2"> With 4 years of coding experience, this tech enthusiast is leading our company's journey with creativity and knowledge. devoted to creating a changing technology environment.</p>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
 
                             <!-- Team item -->
 {{--                            <div class="col-sm-6 col-md-5 col-lg-4">--}}
@@ -294,6 +294,7 @@ Team START -->
                         </div>
                         <div class="row g-4 g-sm-5 justify-content-center align-items-center">
 
+                            @foreach($team as $t)
                             <!-- Team item -->
                             <div class="col-sm-6 col-md-4 col-lg-4">
                                 <div class="card  card-img-scale card-content-hover shadow rounded-top-pill  overflow-hidden">
@@ -301,71 +302,23 @@ Team START -->
                                         <!-- Social links -->
                                         <div class="hover-content h-100">
                                             <ul class="list-group list-group-borderless position-absolute bottom-0 end-0 me-3 mb-3">
-                                                <li class="list-group-item pb-0"> <a class="btn btn-sm btn-round bg-facebook d-flex justify-content-center align-items-center" href="https://www.facebook.com/share/1JNFoy1pCC/"><i class="bi bi-facebook"></i></a> </li>
-                                                <li class="list-group-item pb-0"> <a class="btn btn-sm btn-round bg-linkedin d-flex justify-content-center align-items-center" href="https://www.linkedin.com/in/hassam571?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="bi bi-linkedin"></i></a> </li>
+                                                <li class="list-group-item pb-0"> <a class="btn btn-sm btn-round bg-facebook d-flex justify-content-center align-items-center" href="{{ $t->facebook_link }}"><i class="bi bi-facebook"></i></a> </li>
+                                                <li class="list-group-item pb-0"> <a class="btn btn-sm btn-round bg-linkedin d-flex justify-content-center align-items-center" href="{{ $t->linkedIn_link }}"><i class="bi bi-linkedin"></i></a> </li>
                                             </ul>
                                         </div>
                                         <!-- Card Image -->
-                                        <img src="{{ asset('assets/images/about/laravel_dev1.jpg') }}" class="card-img-top img-scale" alt="card image">
+                                        <img src="{{ asset($t->image) }}" class="card-img-top img-scale" alt="card image">
                                     </div>
 
                                     <!-- Card body -->
                                     <div class="card-body teams-member-desc text-center px-0">
-                                        <h6 class="mb-0">Hassam</h6>
-                                        <small class="text-light">Software Engineer</small>
-                                        <p class="py-3 px-2">Software Engineer with 2 years' expertise. Excels in crafting efficient solutions, dedicated to top-notch code and project success.</p>
+                                        <h6 class="mb-0">{{ $t->name }}</h6>
+                                        <small class="text-light">{{ $t->title }}</small>
+                                        <p class="py-3 px-2">{{ $t->desc }}</p>
                                     </div>
                                 </div>
                             </div>
-
-
-                            <!-- Team item -->
-                            <div class="col-sm-6 col-md-4 col-lg-4">
-                                <div class="card  card-img-scale card-content-hover shadow rounded-top-pill  overflow-hidden">
-                                    <div class="card-img-scale-wrapper">
-                                        <!-- Social links -->
-                                        <div class="hover-content h-100">
-                                            <ul class="list-group list-group-borderless position-absolute bottom-0 end-0 me-3 mb-3">
-                                                <li class="list-group-item pb-0"> <a class="btn btn-sm btn-round bg-facebook d-flex justify-content-center align-items-center" href="https://www.facebook.com/share/1JGVJAyFsL/"><i class="bi bi-facebook"></i></a> </li>
-                                                <li class="list-group-item pb-0"> <a class="btn btn-sm btn-round bg-linkedin d-flex justify-content-center align-items-center" href="https://www.linkedin.com/in/abd-ur-rehman-nawaz?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="bi bi-linkedin"></i></a> </li>
-                                            </ul>
-                                        </div>
-                                        <!-- Card Image -->
-                                        <img src="{{ asset('assets/images/about/react_dev1.jpg') }}" class="card-img-top img-scale" alt="card image">
-                                    </div>
-
-                                    <!-- Card body -->
-                                    <div class="card-body teams-member-desc text-center px-0">
-                                        <h6 class="mb-0">Abdur Rehman</h6>
-                                        <small class="text-light">Senior Frontend Engineer</small>
-                                        <p class="py-3 px-2">With 2 years of expertise, Abdur Rehman is a Senior Frontend Engineer. A visionary in crafting elegant and high-performance user interfaces, he leads with experience and innovation.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Team item -->
-                            <div class="col-sm-6 col-md-4 col-lg-4">
-                                <div class="card  card-img-scale card-content-hover shadow rounded-top-pill  overflow-hidden">
-                                    <div class="card-img-scale-wrapper">
-                                        <!-- Social links -->
-                                        <div class="hover-content h-100">
-{{--                                            <ul class="list-group list-group-borderless position-absolute bottom-0 end-0 me-3 mb-3">--}}
-{{--                                                <li class="list-group-item pb-0"> <a class="btn btn-sm btn-round bg-facebook d-flex justify-content-center align-items-center" href="https://www.facebook.com/share/1JGVJAyFsL/"><i class="bi bi-facebook"></i></a> </li>--}}
-{{--                                                <li class="list-group-item pb-0"> <a class="btn btn-sm btn-round bg-linkedin d-flex justify-content-center align-items-center" href="https://www.linkedin.com/in/abd-ur-rehman-nawaz?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="bi bi-linkedin"></i></a> </li>--}}
-{{--                                            </ul>--}}
-                                        </div>
-                                        <!-- Card Image -->
-                                        <img src="{{ asset('assets/images/about/user_female.jpeg') }}" class="card-img-top img-scale" alt="card image">
-                                    </div>
-
-                                    <!-- Card body -->
-                                    <div class="card-body teams-member-desc text-center px-0">
-                                        <h6 class="mb-0">Saba</h6>
-                                        <small class="text-light">Frontend Engineer</small>
-                                        <p class="py-3 px-2">Saba Frontend Engineer with 1+ years' expertise. Excels in crafting robust solutions, dedicated to innovation and project success.</p>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
 
 
 

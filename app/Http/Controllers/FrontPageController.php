@@ -2,13 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
+use App\Models\Main;
+use App\Models\Portfolio;
+use App\Models\Reviews;
+use App\Models\Team;
 use Illuminate\Http\Request;
 
 class FrontPageController extends Controller
 {
     public function index()
     {
-        return view('frontpages.index');
+
+        $main = Main::first();
+        $review = Reviews::all();
+        return view('frontpages.index',compact('main','review'));
     }
 
     public function contact()
@@ -23,7 +31,8 @@ class FrontPageController extends Controller
 
     public function portfolio()
     {
-        return view('frontpages.portfolio');
+        $portfolio = Portfolio::all();
+        return view('frontpages.portfolio',compact('portfolio'));
     }
 
     public function pricing()
@@ -33,7 +42,10 @@ class FrontPageController extends Controller
 
     public function about()
     {
-        return view('frontpages.about');
+
+        $about = About::first();
+        $team = Team::all();
+        return view('frontpages.about',compact('about','team'));
     }
 
     public function webDevelopment()
