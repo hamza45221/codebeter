@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Carrer;
+use App\Models\ContactUs;
+use App\Models\Job;
 use App\Models\Main;
 use App\Models\Portfolio;
 use App\Models\Reviews;
@@ -16,12 +19,14 @@ class FrontPageController extends Controller
 
         $main = Main::first();
         $review = Reviews::all();
-        return view('frontpages.index',compact('main','review'));
+        $portfolio = Portfolio::all();
+        return view('frontpages.index',compact('main','review','portfolio'));
     }
 
     public function contact()
     {
-        return view('frontpages.contact');
+        $contact = ContactUs::first();
+        return view('frontpages.contact',compact('contact'));
     }
 
     public function error()
@@ -85,7 +90,9 @@ class FrontPageController extends Controller
 
     public function carrer()
     {
-        return view('frontpages.carrer');
+        $carrer = Carrer::first();
+        $job = Job::all();
+        return view('frontpages.carrer',compact('carrer','job'));
     }
     public function applyJob()
     {

@@ -24,6 +24,8 @@ class MailController extends Controller
     }
     public function applyJob(Request $request)
     {
+
+        dd($request->all());
         Mail::to('mail.codebeter@gmail.com')->send(new JobFormMail($request->all()));
 
         return redirect()->back()->with('success', 'Thank you for Apply on this job ...!');

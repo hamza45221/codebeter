@@ -29,12 +29,14 @@ Portfolio START -->
 
                 <div class="row justify-content-center mb-6">
 
-                    @if()
+                    @foreach($portfolio as $port)
+
+                    @if($port->size =='large')
                     <div class="col-md-5">
-                        <div class="card card-img-scale card-content-hover rounded-0 bg-transparent overflow-hidden">
-                            <div class="card-img-scale-wrapper rounded-0">
+                        <div class="card mt-4  card-img-scale card-content-hover rounded-0 bg-transparent overflow-hidden">
+                            <div class="card-img-scale-wrapper rounded-4 rounded-0">
                                 <!-- Card Image -->
-                                <img src="{{ asset('assets/images/portfolio/pro5.jpg') }}" class="img-scale" alt="portfolio-img">
+                                <img src="{{ asset($port->image) }}" class="img-scale" alt="portfolio-img">
                                 <!-- Arrow button -->
                                 <div class="card-img-overlay hover-content d-flex flex-column align-items-center justify-content-center p-5">
                                     <div class="icon-xl bg-dark text-white rounded-circle"><i class="bi bi-arrow-up-right"></i></div>
@@ -43,21 +45,21 @@ Portfolio START -->
                             <!-- Card body -->
                             <div class="card-body d-flex justify-content-between px-0 pb-0">
                                 <div>
-                                    <h6 class="mb-0"><a href="https://texilinkcrm.codebeter.com/" target="_blank" class="heading-color stretched-link">TaxiLink</a></h6>
+                                    <h6 class="mb-0"><a href="{{$port->link}}" target="_blank" class="heading-color stretched-link">{{ $port->name }}</a></h6>
 {{--                                    <span>UI/UX design</span>--}}
                                 </div>
-                                <small>@2025</small>
+                                <small>@ {{$port->year}}</small>
                             </div>
                         </div>
                     </div>
                     @else
-                    <div class="col-md-6 d-flex align-items-center">
+                    <div class="col-md-6 d-flex align-items-center mt-4">
                         <div class="row justify-content-center mt-5 mt-md-0">
-                            <div class="col-md-8">
+                            <div class="col-md-9">
                                 <div class="card card-img-scale card-content-hover rounded-0 bg-transparent overflow-hidden">
-                                    <div class="card-img-scale-wrapper rounded-0">
+                                    <div class="card-img-scale-wrapper rounded-4 ">
                                         <!-- Card Image -->
-                                        <img src="{{ asset('assets/images/portfolio/pro6.jpg') }}" class="img-scale" alt="portfolio-img">
+                                        <img src="{{ asset($port->image) }}" class="img-scale" alt="portfolio-img">
                                         <!-- Arrow button -->
                                         <div class="card-img-overlay hover-content d-flex flex-column align-items-center justify-content-center p-5">
                                             <div class="icon-xl bg-dark text-white rounded-circle"><i class="bi bi-arrow-up-right"></i></div>
@@ -66,16 +68,18 @@ Portfolio START -->
                                     <!-- Card body -->
                                     <div class="card-body d-flex justify-content-between px-0 pb-0">
                                         <div>
-                                            <h6 class="mb-0"><a href="http://denysverh.codebeter.com" target="_blank" class="heading-color stretched-link">Denysverh</a></h6>
+                                            <h6 class="mb-0"><a href="{{ $port->link }}" target="_blank" class="heading-color stretched-link">{{ $port->name }}</a></h6>
 {{--                                            <span>SEO</span>--}}
                                         </div>
-                                        <small>@2025</small>
+                                        <small>@ {{ $port->year }}</small>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     @endif
+
+                    @endforeach
 
 
 

@@ -17,7 +17,7 @@ class CarrerTableSeed extends Seeder
         $carrer = new Carrer();
         $carrer->title1 = 'Join Our Creative Group of';
         $carrer->title2 = 'Web Professionals';
-        $carrer->desc= 'Developing the Future of Web Development and Design. providing cutting-edge, quick, and user-focused digital experiences.';
+        $carrer->desc= 'Developing the Future of Web Development and Design. <br> providing cutting-edge, quick, and user-focused digital experiences.';
         $carrer->promote_title = 'We Promote Connectivity Worldwide';
 
         $carrer->improving_title = 'Improving together';

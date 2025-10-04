@@ -17,7 +17,7 @@ class JobTableSeed extends Seeder
         $job = new \App\Models\Job();
         $job->title = 'UI/UX Designer';
         $job->type = 'Full Time';
-        $job->status = 'available';
+        $job->status = 'Available';
         $job->desc = '';
         $job->end_date = '';
         $job->save();
@@ -25,7 +25,7 @@ class JobTableSeed extends Seeder
         $job = new \App\Models\Job();
         $job->title = 'Front End Developer';
         $job->type = 'Full Time';
-        $job->status = 'available';
+        $job->status = 'Available';
         $job->desc = '';
         $job->end_date = '';
         $job->save();
@@ -33,7 +33,7 @@ class JobTableSeed extends Seeder
         $job = new \App\Models\Job();
         $job->title = 'PhP/Laravel Junior Developer';
         $job->type = 'Full Time';
-        $job->status = 'available';
+        $job->status = 'Available';
         $job->desc = '';
         $job->end_date = '';
         $job->save();
@@ -41,7 +41,7 @@ class JobTableSeed extends Seeder
         $job = new \App\Models\Job();
         $job->title = 'PHP/Laravel Senior Developer';
         $job->type = 'Full Time';
-        $job->status = 'available';
+        $job->status = 'Available';
         $job->desc = '';
         $job->end_date = '';
         $job->save();

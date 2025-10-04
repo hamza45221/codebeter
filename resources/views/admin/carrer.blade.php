@@ -10,7 +10,7 @@
 
             <div class="card-body">
 
-                <h4>Main</h4>
+                <h4>Carrer</h4>
 
                 <form action="{{ route('carrer.store') }}" method="post" enctype="multipart/form-data" style="">
                     @csrf
@@ -28,7 +28,7 @@
 
                         <div class="col-md-12 mb-3">
                             <label for="desc" class="form-label">Description</label>
-                            <textarea class="form-control" id="desc" name="desc" rows="3">{{ old('desc', $carr->desc ?? '') }}</textarea>
+                            <textarea class="form-control" id="desc" name="desc" rows="3">{!! old('desc', $carr->desc ?? '')  !!}</textarea>
                         </div>
 
                         <div class="col-md-12 mb-3">

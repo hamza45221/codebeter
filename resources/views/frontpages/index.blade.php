@@ -344,22 +344,6 @@ Services START -->
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <!-- Service item -->
-                                                        <div class="col-sm-6 col-lg-4 mb-4">
-                                                            <div class="card card-hover-shadow card-icon-transition text-center bg-body bg-opacity-50 bg-blur rounded-4 h-100 p-4">
-                                                                <!-- Icon -->
-                                                                <div class="card-icon icon-xl bg-success d-flex justify-content-center align-items-center text-white rounded-circle">
-                                                                    <img src="{{ asset('assets/images/portfolio/elements/pos.svg') }}" width="45px" />
-                                                                </div>
-
-                                                                <!-- Card body -->
-                                                                <div class="card-footer bg-transparent mt-6 p-0">
-                                                                    <h6 class="mb-3">POS</h6>
-                                                                    <p>We create quick, easy-to-use point-of-sale (POS) systems to simplify transactions and make running your company a breeze.</p>
-                                                                    <a href="{{ route('services') }}" class="link-primary-grad icon-link icon-link-hover stretched-link mb-0">Read more <i class="bi bi-arrow-right"></i></a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
 
                                                         <!-- button -->
                                                         <div class="col-sm-6 col-lg-4 mb-4">
@@ -434,78 +418,31 @@ About END -->
 
                 <div class="row g-4">
                     <!-- Project item -->
-                    <div class="col-md-7">
-                        <div class="card card-img-scale card-content-hover overflow-hidden rounded-4">
-                            <div class="card-img-scale-wrapper">
-                                <!-- Hover content -->
-                                <div class="hover-content bg-blur bg-white bg-opacity-10">
-                                    <!-- Hover content -->
-                                    <div class="z-index-2 mt-auto">
-                                        <span class="">TaxiLink</span>
-                                        <h6 class="mb-0 mt-2"><a href="https://texilinkcrm.codebeter.com/" target="_blank" class=" stretched-link">CRM (Customer Relationship Management)</a></h6>
+                    @foreach($portfolio->take(4) as $port)
+                        <div class="col-md-6">
+                            <div class="card mt-4 card-img-scale card-content-hover rounded-0 bg-transparent overflow-hidden">
+                                <div class="card-img-scale-wrapper rounded-4 rounded-0">
+                                    <img src="{{ asset($port->image) }}" class="img-scale" alt="portfolio-img">
+                                    <div class="card-img-overlay hover-content d-flex flex-column align-items-center justify-content-center p-5">
+                                        <div class="icon-xl bg-dark text-white rounded-circle">
+                                            <i class="bi bi-arrow-up-right"></i>
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- Image -->
-                                <a href="https://texilinkcrm.codebeter.com/"  target="_blank"  class="stretched-link"><img src="{{ asset('assets/images/portfolio/pro5.jpg') }}" class="img-scale img-blur" alt="portfolio-img"></a>
+                                <div class="card-body d-flex justify-content-between px-0 pb-0">
+                                    <div>
+                                        <h6 class="mb-0">
+                                            <a href="{{ $port->link }}" target="_blank" class="heading-color stretched-link">{{ $port->name }}</a>
+                                        </h6>
+                                    </div>
+                                    <small>@ {{ $port->year }}</small>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
 
-                    <!-- Project item -->
-                    <div class="col-md-5">
-                        <div class="card card-img-scale card-content-hover overflow-hidden rounded-4">
-                            <div class="card-img-scale-wrapper">
-                                <!-- Hover content -->
-                                <div class="hover-content bg-blur bg-white bg-opacity-10">
-                                    <!-- Hover content -->
-                                    <div class="z-index-2 mt-auto">
-                                        <span class="">Denysverh</span>
-                                        <h6 class="mb-0 mt-2"><a href="http://denysverh.codebeter.com" class=" stretched-link">Portfolio site</a></h6>
-                                    </div>
-                                </div>
-                                <!-- Image -->
-                                <a href="http://denysverh.codebeter.com" class="stretched-link"><img src="{{ asset('assets/images/portfolio/pro6.jpg') }}" class="img-scale img-blur img-fluid" alt="portfolio-img"></a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Project item -->
-                    <div class="col-md-5">
-                        <div class="card card-img-scale card-content-hover overflow-hidden rounded-4">
-                            <div class="card-img-scale-wrapper">
-                                <!-- Hover content -->
-                                <div class="hover-content bg-blur bg-white bg-opacity-10">
-                                    <!-- Hover content -->
-                                    <div class="z-index-2 mt-auto">
-                                        <span class="">RailOrignal</span>
-                                        <h6 class="mb-0 mt-2"><a href="http://railoriginal.codebeter.com"  target="_blank"  class=" stretched-link">Business Site</a></h6>
-                                    </div>
-                                </div>
-                                <!-- Image -->
-                                <a href="http://railoriginal.codebeter.com"  target="_blank"  class="stretched-link">
-                                    <img src="{{ asset('assets/images/portfolio/pro4.jpg') }}"  class="img-scale img-blur img-fluid" alt="portfolio-img"></a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Project item -->
-                    <div class="col-md-7">
-                        <div class="card card-img-scale card-content-hover overflow-hidden rounded-4">
-                            <div class="card-img-scale-wrapper">
-                                <!-- Hover content -->
-                                <div class="hover-content bg-blur bg-white bg-opacity-10">
-                                    <!-- Hover content -->
-                                    <div class="z-index-2 mt-auto">
-                                        <span class="">Business Brokers</span>
-                                        <h6 class="mb-0 mt-2"><a href="http://business-brokers.codebeter.com"  target="_blank"  class=" stretched-link">Management System</a></h6>
-                                    </div>
-                                </div>
-                                <!-- Image -->
-                                <a href="http://business-brokers.codebeter.com" target="_blank" class="stretched-link">
-                                    <img src="{{ asset('assets/images/portfolio/pro3.jpg') }}"  class="img-scale img-blur img-fluid" alt="portfolio-img"></a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <!-- Row END -->
 

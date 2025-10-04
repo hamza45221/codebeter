@@ -53,11 +53,10 @@ Hero START -->
                 <!-- Main title and search START -->
                 <div class="inner-container text-center position-relative z-index-2 mx-auto">
                     <!-- Title -->
-                    <h1 class="fw-semibold mb-4 lh-base">Join Our Creative Group of <span class="text-primary">Web Professionals</span></h1>
+                    <h1 class="fw-semibold mb-4 lh-base">{{ $carrer->title1 }} <span class="text-primary">{{ $carrer->title2 }}</span></h1>
 
                     <!-- Desc -->
-                    <p class="mb-5">Developing the Future of Web Development and Design.<br>
-                        providing cutting-edge, quick, and user-focused digital experiences.</p>
+                    <p class="mb-5">{!! $carrer->desc !!}</p>
 
                     <!-- Search form START -->
 {{--                    <div class="bg-body d-inline-block border border-primary border-opacity-10 rounded-3 position-relative p-2">--}}
@@ -135,8 +134,8 @@ Hero START -->
                         <div class="swiper-slide  py-3" >
                             <div class="card card-body card-hover-transition shadow-primary p-4">
                                 <h3 class="text-pink mb-2"><i class="bi bi-boxes"></i></h3>
-                                <p class="lead heading-color fw-bold mb-2">Developing together</p>
-                                    <small>We set high standards and go above and beyond expectations in order to achieve excellence in every facet of our work.</small>
+                                <p class="lead heading-color fw-bold mb-2">{{ $carrer->developing_title }}</p>
+                                    <small>{{ $carrer->developing_desc }}</small>
 {{--                                <a href="#" class="link-primary-grad stretched-link icon-link icon-link-hover">Read more <i class="bi bi-arrow-right"></i></a>--}}
                             </div>
                         </div>
@@ -144,8 +143,8 @@ Hero START -->
                         <div class="swiper-slide py-3">
                             <div class="card card-body card-hover-transition shadow-primary p-4">
                                 <h3 class="text-purple mb-2"><i class="bi bi-bullseye"></i></h3>
-                                <p class="lead heading-color fw-bold mb-2">Improving together</p>
-                                    <small>Integrity and trust are the cornerstones of our relationships with clients and team members.</small>
+                                <p class="lead heading-color fw-bold mb-2">{{ $carrer->improving_title }}</p>
+                                    <small>{{ $carrer->improving_desc }}</small>
 {{--                                <a href="#" class="link-primary-grad stretched-link icon-link icon-link-hover">Read more <i class="bi bi-arrow-right"></i></a>--}}
                             </div>
                         </div>
@@ -153,8 +152,8 @@ Hero START -->
                         <div class="swiper-slide py-3">
                             <div class="card card-body card-hover-transition shadow-primary p-4">
                                 <h3 class="text-success mb-2"><i class="bi bi-people"></i></h3>
-                                <p class="lead heading-color fw-bold mb-2">Working together</p>
-                                    <small>We recognize the value of ongoing education and skill development in order to stay ahead in the rapidly evolving digital world.</small>
+                                <p class="lead heading-color fw-bold mb-2">{{ $carrer->working_title }}</p>
+                                    <small>{{ $carrer->working_desc }}</small>
 {{--                                <a href="#" class="link-primary-grad stretched-link icon-link icon-link-hover">Read more <i class="bi bi-arrow-right"></i></a>--}}
                             </div>
                         </div>
@@ -260,7 +259,7 @@ Recruitment Process START -->
 
                         <!-- Title and tabs -->
                         <div class="col-md-5 order-1 order-md-2 ms-auto">
-                            <h2 class="mb-4">Our Recruitment Process</h2>
+                            <h2 class="mb-4">{{ $carrer->requirement_title }}</h2>
                             <!-- Tabs START -->
                             <div class="nav nav-pills-dark flex-column gap-3 nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                                 <button class="nav-link text-start rounded-pill ps-4 py-3 active" id="proceee-one-tab" role="tab" data-bs-toggle="pill" data-bs-target="#proceee-one" aria-selected="true">1. Application Submission</button>
@@ -385,124 +384,122 @@ Job listing START -->
 
                 <div class="container position-relative" data-bs-theme="dark">
                     <!-- Title and button -->
-                    <h2 class="text-center mb-4">Discover Your Career—You Deserve It!</h2>
-                    <p class="text-center lead mx-auto mb-5">Look through our exciting job openings to find the one that best suits your goals and skill set.</p>
+                    <h2 class="text-center mb-4">{{ $carrer->job_title }}</h2>
+                    <p class="text-center lead mx-auto mb-5">{{ $carrer->job_desc }}</p>
 
                     <!-- job list -->
                     <div class="row">
-                        <div class="col-lg-10 mx-auto">
-                            <!-- Job item -->
-                            <div class="card bg-transparent bg-opacity-50 border border-opacity-10 card-hover-transition card-hover-shadow mb-4">
-                                <div class="card-body p-4" type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                    <div class="row g-3 g-sm-4 align-items-center">
-                                        <div class="col-md-5">
-                                            <h6 class="mb-0">UI/UX Designer</h6>
-                                        </div>
-                                        <!-- End Col -->
 
-                                        <div class="col-sm-4 col-md-2">
-                                            <span>Full Time</span>
-                                        </div>
-                                        <!-- End Col -->
+                            <div class="col-lg-10 mx-auto">
+                                <!-- Job item -->
+                                @foreach($job as $j)
+                                    <div class="card bg-transparent bg-opacity-50 border border-opacity-10 card-hover-transition card-hover-shadow mb-4">
+                                        <div class="card-body p-4" type="button" data-bs-toggle="modal" data-bs-target="#applyJobModal-{{ $j->id }}">
+                                            <div class="row g-3 g-sm-4 align-items-center">
+                                                <div class="col-md-5">
+                                                    <h6 class="mb-0">{{ $j->title }}</h6>
+                                                </div>
+                                                <!-- End Col -->
 
-                                        <div class="col-sm-4 col-md-3">
-{{--                                            <span>UI/UX Designer</span>--}}
-                                        </div>
-                                        <!-- End Col -->
+                                                <div class="col-sm-4 col-md-2">
+                                                    <span>{{ $j->type }}</span>
+                                                </div>
+                                                <!-- End Col -->
 
-                                        <div class="col-sm-4 col-md-2 text-sm-end">
-                                            <a href="#" class="fw-semibold link-success icon-link icon-link-hover stretched-link">Apply <i class="bi bi-arrow-right"></i></a>
+                                                <div class="col-sm-4 col-md-3">
+                                                    <span>{{ $j->status }}</span>
+                                                </div>
+                                                <!-- End Col -->
+
+                                                <div class="col-sm-4 col-md-2 text-sm-end">
+                                                    <a href="#" class="fw-semibold link-success icon-link icon-link-hover stretched-link">Apply <i class="bi bi-arrow-right"></i></a>
+                                                </div>
+                                                <!-- End Col -->
+                                            </div>
+                                            <!-- End Row -->
                                         </div>
-                                        <!-- End Col -->
                                     </div>
-                                    <!-- End Row -->
-                                </div>
+
+                                    <!-- Modal for this job -->
+                                    <div class="modal fade" id="applyJobModal-{{ $j->id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="applyJobModalLabel-{{ $j->id }}" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="applyJobModalLabel-{{ $j->id }}">Apply Job - {{ $j->title }}</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+
+                                                <div class="modal-body">
+                                                    <!-- Form START -->
+                                                    <form class="row g-3" action="{{ route('applyjob.mail') }}" enctype="multipart/form-data" method="POST">
+                                                        @csrf
+
+                                                        <!-- Hidden job info -->
+                                                        <input type="hidden" name="job_id" value="{{ $j->id }}">
+                                                        <input type="hidden" name="job_title" value="{{ $j->title }}">
+
+                                                        <div class="col-md-6">
+                                                            <label class="form-label">Full name *</label>
+                                                            <input type="text" name="fullname" class="form-control form-control-sm" placeholder="Full name" required>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <label class="form-label">Email address *</label>
+                                                            <input type="email" name="email" class="form-control form-control-sm" placeholder="name@example.com" required>
+                                                        </div>
+
+
+
+                                                        <div class="col-md-6">
+                                                            <label class="form-label">Phone number *</label>
+                                                            <input type="text" name="phone_number" class="form-control form-control-sm" placeholder="(xx) xxx xxxxxxx" required>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <label class="form-label">Country Name *</label>
+                                                            <input type="text" name="country" class="form-control form-control-sm" placeholder="Write your Country Name" required>
+                                                        </div>
+
+
+
+                                                            <input type="hidden" name="services" value="{{ $j->title }}" class="form-control form-control-sm">
+
+
+{{--                                                        <div class="col-md-6">--}}
+{{--                                                            <label class="form-label">Select Job Type *</label>--}}
+{{--                                                            <select class="form-control form-control-sm" name="services" required>--}}
+{{--                                                                <option value="">Select services</option>--}}
+{{--                                                                <option value="UI/UX Designer" {{ $j->type == 'UI/UX Designer' ? 'selected' : '' }}>UI/UX Designer</option>--}}
+{{--                                                                <option value="Front End Developer" {{ $j->type == 'Front End Developer' ? 'selected' : '' }}>Front End Developer</option>--}}
+{{--                                                                <option value="PHP/Laravel Junior Developer" {{ $j->type == 'PHP/Laravel Junior Developer' ? 'selected' : '' }}>PHP/Laravel Junior Developer</option>--}}
+{{--                                                                <option value="PHP/Laravel Senior Developer" {{ $j->type == 'PHP/Laravel Senior Developer' ? 'selected' : '' }}>PHP/Laravel Senior Developer</option>--}}
+{{--                                                            </select>--}}
+{{--                                                        </div>--}}
+
+                                                        <div class="col-md-6">
+                                                            <label class="form-label">Upload Your CV *</label>
+                                                            <input type="file" name="upload_pro_detail" class="form-control form-control-sm" required>
+                                                        </div>
+
+
+                                                        <div class="col-md-12">
+                                                            <label class="form-label">Address *</label>
+                                                            <textarea class="form-control"  name="address" placeholder="Write your address here...." style="height: 120px" required></textarea>
+                                                        </div>
+
+                                                        <!-- Button -->
+                                                        <div class="col-12">
+                                                            <button type="submit" class="btn btn-primary mb-0">Send Application</button>
+                                                        </div>
+                                                    </form>
+                                                    <!-- Form END -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
                             </div>
 
-                            <!-- Job item -->
-                            <div class="card bg-transparent bg-opacity-50 border border-opacity-10 card-hover-transition card-hover-shadow mb-4">
-                                <div class="card-body p-4" type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                    <div class="row g-3 g-sm-4 align-items-center">
-                                        <div class="col-md-5">
-                                            <h6 class="mb-0">Front End Developer</h6>
-                                        </div>
-                                        <!-- End Col -->
-
-                                        <div class="col-sm-4 col-md-2">
-                                            <span>Full Time</span>
-                                        </div>
-                                        <!-- End Col -->
-
-                                        <div class="col-sm-4 col-md-3">
-{{--                                            <span>Software development</span>--}}
-                                        </div>
-                                        <!-- End Col -->
-
-                                        <div class="col-sm-4 col-md-2 text-sm-end">
-                                            <a href="#" class="fw-semibold link-success icon-link icon-link-hover stretched-link">Apply <i class="bi bi-arrow-right"></i></a>
-                                        </div>
-                                        <!-- End Col -->
-                                    </div>
-                                    <!-- End Row -->
-                                </div>
-                            </div>
-
-                            <!-- Job item -->
-                            <div class="card bg-transparent bg-opacity-50 border border-opacity-10 card-hover-transition card-hover-shadow mb-4">
-                                <div class="card-body p-4" type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                    <div class="row g-3 g-sm-4 align-items-center">
-                                        <div class="col-md-5">
-                                            <h6 class="mb-0">PhP/Laravel Junior Developer</h6>
-                                        </div>
-                                        <!-- End Col -->
-
-                                        <div class="col-sm-4 col-md-2">
-                                            <span>Full Time</span>
-                                        </div>
-                                        <!-- End Col -->
-
-                                        <div class="col-sm-4 col-md-3">
-{{--                                            <span>Design</span>--}}
-                                        </div>
-                                        <!-- End Col -->
-
-                                        <div class="col-sm-4 col-md-2 text-sm-end">
-                                            <a href="#" class="fw-semibold link-success icon-link icon-link-hover stretched-link">Apply <i class="bi bi-arrow-right"></i></a>
-                                        </div>
-                                        <!-- End Col -->
-                                    </div>
-                                    <!-- End Row -->
-                                </div>
-                            </div>
-
-                            <!-- Job item -->
-                            <div class="card bg-transparent bg-opacity-50 border border-opacity-10 card-hover-transition card-hover-shadow mb-4">
-                                <div class="card-body p-4" type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                    <div class="row g-3 g-sm-4 align-items-center">
-                                        <div class="col-md-5">
-                                            <h6 class="mb-0">PHP/Laravel Senior Developer</h6>
-                                        </div>
-                                        <!-- End Col -->
-
-                                        <div class="col-sm-4 col-md-2">
-                                            <span>Full Time</span>
-                                        </div>
-                                        <!-- End Col -->
-
-                                        <div class="col-sm-4 col-md-3">
-{{--                                            <span>Sales</span>--}}
-                                        </div>
-                                        <!-- End Col -->
-
-                                        <div class="col-sm-4 col-md-2 text-sm-end">
-                                            <a href="#" class="fw-semibold link-success icon-link icon-link-hover stretched-link">Apply <i class="bi bi-arrow-right"></i></a>
-                                        </div>
-                                        <!-- End Col -->
-                                    </div>
-                                    <!-- End Row -->
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <!-- Row END -->
                 </div>
@@ -713,67 +710,6 @@ Review END -->
 
 </main>
 
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">Apply Job</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <div class="modal-body">
-                <!-- Form START -->
-                <form class="row g-3" action="{{ route('applyjob.mail') }}" enctype="multipart/form-data" method="POST">
-                    @csrf
-                    <div class="col-md-6">
-                        <label class="form-label">Full name *</label>
-                        <input type="text" name="fullname" class="form-control form-control-sm" placeholder="Full name">
-                    </div>
-
-                    <div class="col-md-6">
-                        <label class="form-label">Email address *</label>
-                        <input type="email" name="email" class="form-control form-control-sm" id="floatingInput" placeholder="name@example.com">
-                    </div>
-
-                    <div class="col-md-6">
-                        <label class="form-label">Address *</label>
-                        <textarea class="form-control" name="address" placeholder="Write your address here...." id="floatingTextarea2" style="height: 70px"></textarea>
-                    </div>
-
-                    <div class="col-md-6">
-                        <label class="form-label">Phone number *</label>
-                        <input type="text" name="phone_number" class="form-control form-control-sm" placeholder="(xx) xxx xxxxxxx">
-                    </div>
-                    <div class="col-md-6">
-                        <label class="form-label">Country Name *</label>
-                        <input type="text" name="country" class="form-control form-control-sm" placeholder="Write your Country Name">
-                    </div>
-                    <div class="col-md-6">
-                        <label class="form-label">Select Job Type *</label>
-                        <select class="form-control form-control-sm" name="services">
-                            <option class="" >Select services</option>
-                            <option value="UI/UX Designer">UI/UX Designer</option>
-                            <option value="Front End Developer">Front End Developer</option>
-                            <option value="PHP/Laravel Junior Developer">PHP/Laravel Junior Developer</option>
-                            <option value="PHP/Laravel Senior Developer">PHP/Laravel Senior Developer<option>
-
-                        </select>
-                    </div>
-
-                    <div class="col-md-6">
-                        <label class="form-label">Upload Your CV *</label>
-                        <input type="file" name="upload_pro_detail" class="form-control form-control-sm" placeholder="Write your project details">
-                    </div>
-                    <!-- Button -->
-                    <button type="submit" class="btn btn-primary mb-0">Send a message</button>
-                </form>
-                <!-- Form END -->
-            </div>
-
-        </div>
-    </div>
-</div>
 
 
 @endsection
