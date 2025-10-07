@@ -420,7 +420,7 @@ About END -->
                     <!-- Project item -->
                     @foreach($portfolio->take(4) as $port)
                         <div class="col-md-6">
-                            <div class="card mt-4 card-img-scale card-content-hover rounded-0 bg-transparent overflow-hidden">
+                            <div class="card shadow mt-2 rounded-4 card-img-scale card-content-hover rounded-0 bg-transparent overflow-hidden">
                                 <div class="card-img-scale-wrapper rounded-4 rounded-0">
                                     <img src="{{ asset($port->image) }}" class="img-scale" alt="portfolio-img">
                                     <div class="card-img-overlay hover-content d-flex flex-column align-items-center justify-content-center p-5">
@@ -429,7 +429,7 @@ About END -->
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-body d-flex justify-content-between px-0 pb-0">
+                                <div class="card-body d-flex justify-content-between px-4 pb-4 p-0">
                                     <div>
                                         <h6 class="mb-0">
                                             <a href="{{ $port->link }}" target="_blank" class="heading-color stretched-link">{{ $port->name }}</a>

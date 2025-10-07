@@ -104,7 +104,7 @@ class FrontPageController extends Controller
         return view('frontpages.team');
     }
 
-    public function signin()
+    public function login()
     {
         return view('frontpages.sign-in');
     }

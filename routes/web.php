@@ -77,6 +77,14 @@ Route::group(['prefix' => 'dashboard'], function () {
         Route::get('/delete/{id}', [\App\Http\Controllers\Admin\JobController::class, 'delete'])->name('job.delete');
     });
 
+
+    Route::group(['prefix' => 'mails'], function () {
+        Route::get('/project', [\App\Http\Controllers\MailController::class, 'projectMailIndex'])->name('mail.project');
+        Route::get('/contact', [\App\Http\Controllers\MailController::class, 'contactMailIndex'])->name('mail.contact');
+        Route::get('/applicant', [\App\Http\Controllers\MailController::class, 'applicantMailIndex'])->name('mail.applicant');
+
+    });
+
 });
 
 
@@ -102,7 +110,9 @@ Route::get('/crm', [\App\Http\Controllers\FrontPageController::class,'crm'])->na
 Route::get('/carrer', [\App\Http\Controllers\FrontPageController::class,'carrer'])->name('carrer');
 Route::get('/apply-jpb', [\App\Http\Controllers\FrontPageController::class,'applyJob'])->name('apply.job');
 Route::get('/team', [\App\Http\Controllers\FrontPageController::class,'team'])->name('team');
-Route::get('/sign-in', [\App\Http\Controllers\FrontPageController::class,'signin'])->name('signin');
+Route::get('/login', [\App\Http\Controllers\FrontPageController::class,'login'])->name('login');
+Route::get('/auth/redirect', [\App\Http\Controllers\Auth\GoogleAuthController::class,'authRedirect'])->name('auth.redirect');
+Route::get('/auth/google/callback', [\App\Http\Controllers\Auth\GoogleAuthController::class,'authCallback'])->name('auth.callback');
 
 
 

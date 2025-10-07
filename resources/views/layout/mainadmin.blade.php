@@ -65,6 +65,9 @@
     <script src="{{ asset('admin/assets/js/config.js')}}"></script>
 
 
+    <link rel="stylesheet" href="{{ asset('admin/assets/vendor/css/pages/app-email.css') }}" />
+
+
     <!-- Line Awesome (for la la-trash, la la-plus icons) -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" rel="stylesheet"/>
 
@@ -92,6 +95,10 @@
              margin-top:3px;
              margin-bottom: 3px;
          }
+
+        .app-email .app-email-view {
+            width: calc(100% - 6rem) !important;
+        }
     </style>
 </head>
 
@@ -118,7 +125,38 @@
 
             <div class="menu-inner-shadow"></div>
 
+
+
             <ul class="menu-inner py-1">
+                <li class="menu-item ">
+                    <h6 class="ms-4">Emails</h6>
+                </li>
+
+                <li class="menu-item {{ Route::is('mail.applicant') ? 'active' : '' }}">
+                    <a href="{{ route('mail.applicant') }}" class="menu-link">
+                        <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                        <div data-i18n="Applicants  ">Applicants  </div>
+                    </a>
+                </li>
+
+                <li class="menu-item {{ Route::is('mail.contact') ? 'active' : '' }}">
+                    <a href="{{ route('mail.contact') }}" class="menu-link">
+                        <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                        <div data-i18n="Contacts  ">Contacts  </div>
+                    </a>
+                </li>
+
+                <li class="menu-item {{ Route::is('mail.project') ? 'active' : '' }}">
+                    <a href="{{ route('mail.project') }}" class="menu-link">
+                        <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                        <div data-i18n="Projects     ">Projects  </div>
+                    </a>
+                </li>
+
+
+                <li class="menu-item mt-4">
+                    <h6 class="ms-4">Page Settings</h6>
+                </li>
                 <!-- Dashboards -->
 {{--                @if( auth()->user()->dashboard === 'yes' )--}}
                     <li class="menu-item {{ Route::is('dashboard') ? 'active' : '' }}">
@@ -347,6 +385,15 @@
 <script src="{{ asset('admin/assets/js/tables-datatables-advanced.js') }}"></script>
 
 
+<!-- Vendors JS -->
+<script src="{{ asset('admin/ssets/vendor/libs/quill/katex.js') }}"></script>
+<script src="{{ asset('admin/assets/vendor/libs/quill/quill.js') }}"></script>
+<script src="{{ asset('admin/assets/vendor/libs/select2/select2.js') }}"></script>
+<script src="{{ asset('admin/assets/vendor/libs/block-ui/block-ui.js') }}"></script>
+
+
+<!-- Page JS -->
+<script src="{{ asset('admin/assets/js/app-email.js') }}"></script>
 
 </body>
 </html>
