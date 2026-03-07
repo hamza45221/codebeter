@@ -83,22 +83,34 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <!-- Plugins CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/glightbox/css/glightbox.css') }}">
 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
     <!-- Theme CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 
+
+
+
+
     <style>
-        .btn-primary, .bg-primary {
+        .btn-primary,
+        .bg-primary {
             background: linear-gradient(to right, #7F39F8 0%, #543DE7 51%, #7F39F8 100%) !important;
         }
 
-        .offcanvas, .offcanvas-sm {
+        .offcanvas,
+        .offcanvas-sm {
             width: 520px !important;
         }
 
@@ -106,6 +118,7 @@
             padding-top: 5rem !important;
             padding-bottom: 5rem !important;
         }
+
         /*.bg-dark {*/
         /*    background-color: white !important;*/
         /*}*/
@@ -115,461 +128,668 @@
 
 <body>
 
-<!-- Header START -->
-<div class="header-absolute">
-    <!-- Top header -->
-    <div class="alert fade show border-0 rounded-0 text-center overflow-hidden z-index-9 py-2 m-0 d-none d-lg-block" style="background: linear-gradient(to right, #7F39F8 0%, #543DE7 51%, #7F39F8 100%);" role="alert">
-        <div class="container d-flex justify-content-between px-2 px-xl-4">
-            <!-- Contact info -->
-            <ul class="list-inline d-flex flex-wrap gap-3 text-white mb-0">
-                <li class="list-inline-item small fw-light">
-                    <i class="bi bi-headset me-2"></i>
-                    Call us:
-                    <a href="https://wa.me/923291070012" class="link-white" target="_blank">
-                        +92 3291070012
-                    </a>
-                </li>
-                <li class="list-inline-item small fw-light">
-                    <i class="bi bi-envelope me-2"></i>
-                    Email:
-                    <a href="mailto:mail.codebeter@gmail.com" class="link-white">
-                        mail.codebeter@gmail.com
-                    </a>
-                </li>
-            </ul>
-
-
-            <!-- Social links -->
-            <ul class="list-inline mb-0">
-                <li class="list-inline-item small text-white">Follow us on: </li>
-                <li class="list-inline-item"> <a href="https://www.facebook.com/profile.php?id=61577180078622" target="_blank" class="link-white"><i class="bi bi-facebook"></i></a> </li>
-{{--                <li class="list-inline-item"> <a href="#" class="link-white"><i class="bi bi-instagram"></i></a> </li>--}}
-                <li class="list-inline-item"> <a href="https://x.com/CodeBeter" target="_blank" class="link-white"><i class="bi bi-twitter-x"></i></a> </li>
-                <li class="list-inline-item"> <a href="https://www.linkedin.com/in/hamza-javed-48574936b/" target="_blank" class="link-white"><i class="bi bi-linkedin"></i></a> </li>
-            </ul>
-        </div>
-    </div>
-
     <!-- Header START -->
-    <header class="header-sticky bg-transparent">
-        <!-- Logo Nav START -->
-        <nav class="navbar navbar-expand-xl" >
-            <div class="container">
-                <!-- Logo START -->
-                <a class="navbar-brand me-0" href="{{ route('index') }}">
-                    <img class="light-mode-item navbar-brand-item" src="{{ asset('assets/images/codebeter horizontal logo-sm.png') }}" alt="logo">
-                    <img class="dark-mode-item navbar-brand-item"  src="{{ asset('assets/images/codebeter horizontal logo-sm.png') }}" alt="logo">
-                </a>
-                <!-- Logo END -->
+    <div class="header-absolute">
+        <!-- Top header -->
+        <div class="alert fade show border-0 rounded-0 text-center overflow-hidden z-index-9 py-2 m-0 d-none d-lg-block"
+            style="background: linear-gradient(to right, #7F39F8 0%, #543DE7 51%, #7F39F8 100%);" role="alert">
+            <div class="container d-flex justify-content-between px-2 px-xl-4">
+                <!-- Contact info -->
+                <ul class="list-inline d-flex flex-wrap gap-3 text-white mb-0">
+                    <li class="list-inline-item small fw-light">
+                        <i class="bi bi-headset me-2"></i>
+                        Call us:
+                        <a href="https://wa.me/923291070012" class="link-white" target="_blank">
+                            +92 3291070012
+                        </a>
+                    </li>
+                    <li class="list-inline-item small fw-light">
+                        <i class="bi bi-envelope me-2"></i>
+                        Email:
+                        <a href="mailto:mail.codebeter@gmail.com" class="link-white">
+                            info@codebeter.com
+                        </a>
+                    </li>
+                </ul>
 
-                <!-- Main navbar START -->
-                <div class="navbar-collapse collapse" id="navbarCollapse" >
 
-                <ul class="navbar-nav navbar-nav-scroll dropdown-hover mx-auto">
+                <!-- Social links -->
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item small text-white">Follow us on: </li>
+                    <li class="list-inline-item"> <a href="https://www.facebook.com/profile.php?id=61577180078622"
+                            target="_blank" class="link-white"><i class="bi bi-facebook"></i></a> </li>
+                    {{--                <li class="list-inline-item"> <a href="#" class="link-white"><i class="bi bi-instagram"></i></a> </li> --}}
+                    <li class="list-inline-item"> <a href="https://x.com/CodeBeter" target="_blank"
+                            class="link-white"><i class="bi bi-twitter-x"></i></a> </li>
+                    <li class="list-inline-item"> <a href="https://www.linkedin.com/in/hamza-javed-48574936b/"
+                            target="_blank" class="link-white"><i class="bi bi-linkedin"></i></a> </li>
+                </ul>
+            </div>
+        </div>
 
-                        <!-- Nav item -->
-                        <li class="nav-item"> <a class="nav-link" href="{{route('index')}}">Home</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="{{ route('about') }}">About</a> </li>
+        <!-- Header START -->
+        <header class="header-sticky bg-transparent">
+            <!-- Logo Nav START -->
+            <nav class="navbar navbar-expand-xl">
+                <div class="container">
+                    <!-- Logo START -->
+                    <a class="navbar-brand me-0" href="{{ route('index') }}">
+                        <img class="light-mode-item navbar-brand-item"
+                            src="{{ asset('assets/images/codebeter horizontal logo-sm.png') }}" alt="logo">
+                        <img class="dark-mode-item navbar-brand-item"
+                            src="{{ asset('assets/images/codebeter horizontal logo-sm.png') }}" alt="logo">
+                    </a>
+                    <!-- Logo END -->
+
+                    <!-- Main navbar START -->
+                    <div class="navbar-collapse collapse" id="navbarCollapse">
+
+                        <ul class="navbar-nav navbar-nav-scroll dropdown-hover mx-auto">
+
+                            <!-- Nav item -->
+                            <li class="nav-item"> <a class="nav-link" href="{{ route('index') }}">Home</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="{{ route('about') }}">About</a> </li>
 
 
-                        <!-- Nav item -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
-                            <div class="dropdown-menu dropdown-menu-size-xl dropdown-menu-center p-xl-3">
-                                <div class="row row-cols-1 row-cols-md-2 pt-2">
-                                    <!-- Doc menu -->
-                                    <div class="col">
-                                        <div class="dropdown-item bg-secondary-hover d-flex align-items-center justify-content-between position-relative text-wrap py-3">
-                                            <div class="d-flex">
-                                                <!-- Icon -->
-                                                <div class="icon-md bg-info bg-opacity-15 d-flex justify-content-center align-items-center text-primary rounded flex-shrink-0"><i class="bi bi-file-earmark-text fs-6"></i></div>
-                                                <!-- Content -->
-                                                <div class="mx-3">
-                                                    <p class="stretched-link heading-color fw-bold mb-0">Website Development</p>
-                                                    <p class="mb-0 text-body small">Custom web solutions tailored to your needs.</p>
+                            <!-- Nav item -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-auto-close="outside"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                                <div class="dropdown-menu dropdown-menu-size-xl dropdown-menu-center p-xl-3">
+                                    <div class="row row-cols-1 row-cols-md-2 pt-2">
+                                        <!-- Doc menu -->
+                                        <div class="col">
+                                            <div
+                                                class="dropdown-item bg-secondary-hover d-flex align-items-center justify-content-between position-relative text-wrap py-3">
+                                                <div class="d-flex">
+                                                    <!-- Icon -->
+                                                    <div
+                                                        class="icon-md bg-info bg-opacity-15 d-flex justify-content-center align-items-center text-primary rounded flex-shrink-0">
+                                                        <i class="bi bi-file-earmark-text fs-6"></i></div>
+                                                    <!-- Content -->
+                                                    <div class="mx-3">
+                                                        <p class="stretched-link heading-color fw-bold mb-0">Website
+                                                            Development</p>
+                                                        <p class="mb-0 text-body small">Custom web solutions tailored
+                                                            to your needs.</p>
+                                                    </div>
                                                 </div>
+                                                <!-- Button -->
+                                                <a class="icon-link icon-link-hover text-primary-hover stretched-link"
+                                                    href="{{ route('services') }}"><i
+                                                        class="bi bi-chevron-right"></i> </a>
                                             </div>
-                                            <!-- Button -->
-                                            <a class="icon-link icon-link-hover text-primary-hover stretched-link" href="{{ route('services') }}"><i class="bi bi-chevron-right"></i> </a>
                                         </div>
-                                    </div>
 
-                                    <!-- Doc menu -->
-                                    <div class="col">
-                                        <div class="dropdown-item bg-secondary-hover d-flex align-items-center justify-content-between position-relative text-wrap py-3">
-                                            <div class="d-flex">
-                                                <!-- Icon -->
-                                                <div class="icon-md bg-pink bg-opacity-15 d-flex justify-content-center align-items-center text-pink rounded flex-shrink-0"><i class="bi bi-stickies fs-6"></i></div>
-                                                <!-- Content -->
-                                                <div class="mx-3">
-                                                    <p class="stretched-link heading-color fw-bold mb-0">API Development</p>
-                                                    <p class="mb-0 text-body small">Configured API solutions for seamless system integration.</p>
+                                        <!-- Doc menu -->
+                                        <div class="col">
+                                            <div
+                                                class="dropdown-item bg-secondary-hover d-flex align-items-center justify-content-between position-relative text-wrap py-3">
+                                                <div class="d-flex">
+                                                    <!-- Icon -->
+                                                    <div
+                                                        class="icon-md bg-pink bg-opacity-15 d-flex justify-content-center align-items-center text-pink rounded flex-shrink-0">
+                                                        <i class="bi bi-stickies fs-6"></i></div>
+                                                    <!-- Content -->
+                                                    <div class="mx-3">
+                                                        <p class="stretched-link heading-color fw-bold mb-0">API
+                                                            Development</p>
+                                                        <p class="mb-0 text-body small">Configured API solutions for
+                                                            seamless system integration.</p>
+                                                    </div>
                                                 </div>
+                                                <!-- Button -->
+                                                <a class="icon-link icon-link-hover text-primary-hover stretched-link"
+                                                    href="{{ route('services.api') }}"><i
+                                                        class="bi bi-chevron-right"></i> </a>
                                             </div>
-                                            <!-- Button -->
-                                            <a class="icon-link icon-link-hover text-primary-hover stretched-link" href="{{ route('services.api') }}"><i class="bi bi-chevron-right"></i> </a>
                                         </div>
-                                    </div>
 
-                                    <!-- Doc menu -->
-                                    <div class="col">
-                                        <div class="dropdown-item bg-secondary-hover d-flex align-items-center justify-content-between position-relative text-wrap py-3">
-                                            <div class="d-flex">
-                                                <!-- Icon -->
-                                                <div class="icon-md bg-success bg-opacity-15 d-flex justify-content-center align-items-center text-success rounded flex-shrink-0"><i class="bi bi-bullseye fs-6"></i></div>
-                                                <!-- Content -->
-                                                <div class="mx-3">
-                                                    <p class="stretched-link heading-color fw-bold mb-0">CRM</p>
-                                                    <p class="mb-0 text-body small">We develop CRMs that boost customer engagement.</p>
+                                        <!-- Doc menu -->
+                                        <div class="col">
+                                            <div
+                                                class="dropdown-item bg-secondary-hover d-flex align-items-center justify-content-between position-relative text-wrap py-3">
+                                                <div class="d-flex">
+                                                    <!-- Icon -->
+                                                    <div
+                                                        class="icon-md bg-success bg-opacity-15 d-flex justify-content-center align-items-center text-success rounded flex-shrink-0">
+                                                        <i class="bi bi-bullseye fs-6"></i></div>
+                                                    <!-- Content -->
+                                                    <div class="mx-3">
+                                                        <p class="stretched-link heading-color fw-bold mb-0">CRM</p>
+                                                        <p class="mb-0 text-body small">We develop CRMs that boost
+                                                            customer engagement.</p>
+                                                    </div>
                                                 </div>
+                                                <!-- Button -->
+                                                <a class="icon-link icon-link-hover text-primary-hover stretched-link"
+                                                    href="{{ route('crm') }}"><i class="bi bi-chevron-right"></i>
+                                                </a>
                                             </div>
-                                            <!-- Button -->
-                                            <a class="icon-link icon-link-hover text-primary-hover stretched-link" href="{{ route('crm') }}"><i class="bi bi-chevron-right"></i> </a>
                                         </div>
-                                    </div>
 
-                                    <!-- Doc menu -->
-                                    <div class="col">
-                                        <div class="dropdown-item bg-secondary-hover d-flex align-items-center justify-content-between position-relative text-wrap py-3">
-                                            <div class="d-flex">
-                                                <!-- Icon -->
-                                                <div class="icon-md bg-warning bg-opacity-15 d-flex justify-content-center align-items-center text-warning rounded flex-shrink-0"><i class="bi bi-mask fs-6"></i></div>
-                                                <!-- Content -->
-                                                <div class="mx-3">
-                                                    <p class="stretched-link heading-color fw-bold mb-0">POS (Point of sale system)</p>
-                                                    <p class="mb-0 text-body small">Integrated POS solutions for real-time transaction tracking.</p>
+                                        <!-- Doc menu -->
+                                        <div class="col">
+                                            <div
+                                                class="dropdown-item bg-secondary-hover d-flex align-items-center justify-content-between position-relative text-wrap py-3">
+                                                <div class="d-flex">
+                                                    <!-- Icon -->
+                                                    <div
+                                                        class="icon-md bg-warning bg-opacity-15 d-flex justify-content-center align-items-center text-warning rounded flex-shrink-0">
+                                                        <i class="bi bi-mask fs-6"></i></div>
+                                                    <!-- Content -->
+                                                    <div class="mx-3">
+                                                        <p class="stretched-link heading-color fw-bold mb-0">POS (Point
+                                                            of sale system)</p>
+                                                        <p class="mb-0 text-body small">Integrated POS solutions for
+                                                            real-time transaction tracking.</p>
+                                                    </div>
                                                 </div>
+                                                <!-- Button -->
+                                                <a class="icon-link icon-link-hover text-primary-hover stretched-link"
+                                                    href="{{ route('pos') }}"><i class="bi bi-chevron-right"></i>
+                                                </a>
                                             </div>
-                                            <!-- Button -->
-                                            <a class="icon-link icon-link-hover text-primary-hover stretched-link" href="{{ route('pos') }}" target="_blank"><i class="bi bi-chevron-right"></i> </a>
                                         </div>
-                                    </div>
 
-                                    <!-- Doc menu -->
-                                    <div class="col">
-                                        <div class="dropdown-item bg-secondary-hover d-flex align-items-center justify-content-between position-relative text-wrap py-3">
-                                            <div class="d-flex">
-                                                <!-- Icon -->
-                                                <div class="icon-md bg-info bg-opacity-15 d-flex justify-content-center align-items-center text-info rounded flex-shrink-0"><i class="bi bi-grid-fill fs-6"></i></div>
-                                                <!-- Content -->
-                                                <div class="mx-3">
-                                                    <p class="stretched-link heading-color fw-bold mb-0">Mobile App Development</p>
-                                                    <p class="mb-0 text-body small">Innovative mobile solutions for growing your business.</p>
+                                        <!-- Doc menu -->
+                                        <div class="col">
+                                            <div
+                                                class="dropdown-item bg-secondary-hover d-flex align-items-center justify-content-between position-relative text-wrap py-3">
+                                                <div class="d-flex">
+                                                    <!-- Icon -->
+                                                    <div
+                                                        class="icon-md bg-info bg-opacity-15 d-flex justify-content-center align-items-center text-info rounded flex-shrink-0">
+                                                        <i class="bi bi-grid-fill fs-6"></i></div>
+                                                    <!-- Content -->
+                                                    <div class="mx-3">
+                                                        <p class="stretched-link heading-color fw-bold mb-0">Mobile App
+                                                            Development</p>
+                                                        <p class="mb-0 text-body small">Innovative mobile solutions for
+                                                            growing your business.</p>
+                                                    </div>
                                                 </div>
+                                                <!-- Button -->
+                                                <a class="icon-link icon-link-hover text-primary-hover stretched-link"
+                                                    href="{{ route('app.development') }}"><i
+                                                        class="bi bi-chevron-right"></i> </a>
                                             </div>
-                                            <!-- Button -->
-                                            <a class="icon-link icon-link-hover text-primary-hover stretched-link" href="{{ route('app.development') }}" ><i class="bi bi-chevron-right"></i> </a>
                                         </div>
-                                    </div>
 
-                                    <!-- Doc menu -->
-{{--                                    <div class="col">--}}
-{{--                                        <div class="dropdown-item bg-secondary-hover d-flex align-items-center justify-content-between position-relative text-wrap py-3">--}}
-{{--                                            <div class="d-flex">--}}
-{{--                                                <!-- Icon -->--}}
-{{--                                                <div class="icon-md bg-purple bg-opacity-15 text-purple rounded flex-shrink-0"><i class="bi bi-chat-dots fs-6"></i></div>--}}
-{{--                                                <!-- Content -->--}}
-{{--                                                <div class="mx-3">--}}
-{{--                                                    <p class="stretched-link heading-color fw-bold mb-0">Support and maintenance</p>--}}
-{{--                                                    <p class="mb-0 text-body small">Need help? Our customers support is there to help you.</p>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                            <!-- Button -->--}}
-{{--                                            <a class="icon-link icon-link-hover text-primary-hover stretched-link" href="#"><i class="bi bi-chevron-right"></i> </a>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
+                                        <!-- Doc menu -->
+                                        {{--                                    <div class="col"> --}}
+                                        {{--                                        <div class="dropdown-item bg-secondary-hover d-flex align-items-center justify-content-between position-relative text-wrap py-3"> --}}
+                                        {{--                                            <div class="d-flex"> --}}
+                                        {{--                                                <!-- Icon --> --}}
+                                        {{--                                                <div class="icon-md bg-purple bg-opacity-15 text-purple rounded flex-shrink-0"><i class="bi bi-chat-dots fs-6"></i></div> --}}
+                                        {{--                                                <!-- Content --> --}}
+                                        {{--                                                <div class="mx-3"> --}}
+                                        {{--                                                    <p class="stretched-link heading-color fw-bold mb-0">Support and maintenance</p> --}}
+                                        {{--                                                    <p class="mb-0 text-body small">Need help? Our customers support is there to help you.</p> --}}
+                                        {{--                                                </div> --}}
+                                        {{--                                            </div> --}}
+                                        {{--                                            <!-- Button --> --}}
+                                        {{--                                            <a class="icon-link icon-link-hover text-primary-hover stretched-link" href="#"><i class="bi bi-chevron-right"></i> </a> --}}
+                                        {{--                                        </div> --}}
+                                        {{--                                    </div> --}}
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
+                            </li>
 
 
-                        <li class="nav-item"> <a class="nav-link" href="{{ route('portfolio') }}">Work</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="{{ route('carrer') }}">Carrier</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="{{ route('contact') }}">Contact us</a> </li>
-                        <li class="nav-item d-block d-sm-none ">
-                            <a href="#" class="btn text-light btn-sm mb-0 rounded-3 py-3 py-md-3 py-lg-3 py-xl-3" style="width: 100% !important;background: linear-gradient(to right, #7F39F8 0%, #543DE7 51%, #7F39F8 100%);" data-bs-toggle="offcanvas" data-bs-target="#scheduleCall" aria-controls="scheduleCall">
+                            <li class="nav-item"> <a class="nav-link" href="{{ route('portfolio') }}">Work</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="{{ route('carrer') }}">Carrier</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="{{ route('contact') }}">Contact us</a>
+                            </li>
+                            <li class="nav-item d-block d-sm-none ">
+                                <a href="#"
+                                    class="btn text-light btn-sm mb-0 rounded-3 py-3 py-md-3 py-lg-3 py-xl-3"
+                                    style="width: 100% !important;background: linear-gradient(to right, #7F39F8 0%, #543DE7 51%, #7F39F8 100%);"
+                                    data-bs-toggle="offcanvas" data-bs-target="#scheduleCall"
+                                    aria-controls="scheduleCall">
+                                    <i class="bi bi-calendar-week text-light me-2 "></i>
+                                    Launch Project</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Main navbar END -->
+
+                    <!-- Buttons -->
+                    <ul class="nav align-items-center dropdown-hover ms-sm-2">
+                        <!-- Dark mode option START -->
+                        {{--                    <li class="nav-item dropdown dropdown-animation"> --}}
+                        {{--                        <button class="btn btn-link mb-0 px-2 lh-1" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static"> --}}
+                        {{--                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"  class="bi bi-circle-half theme-icon-active fill-mode fa-fw" viewBox="0 0 16 16"> --}}
+                        {{--                                <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/> --}}
+                        {{--                                <use href="#"></use> --}}
+                        {{--                            </svg> --}}
+                        {{--                        </button> --}}
+
+                        {{--                        <ul class="dropdown-menu min-w-auto dropdown-menu-end" aria-labelledby="bd-theme"> --}}
+                        {{--                            <li class="mb-1"> --}}
+                        {{--                                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"> --}}
+                        {{--                                    <svg width="16" height="16" fill="currentColor" class="bi bi-brightness-high-fill fa-fw mode-switch me-1" viewBox="0 0 16 16"> --}}
+                        {{--                                        <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/> --}}
+                        {{--                                        <use href="#"></use> --}}
+                        {{--                                    </svg>Light --}}
+                        {{--                                </button> --}}
+                        {{--                            </li> --}}
+                        {{--                            <li class="mb-1"> --}}
+                        {{--                                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"> --}}
+                        {{--                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars-fill fa-fw mode-switch me-1" viewBox="0 0 16 16"> --}}
+                        {{--                                        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/> --}}
+                        {{--                                        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/> --}}
+                        {{--                                        <use href="#"></use> --}}
+                        {{--                                    </svg>Dark --}}
+                        {{--                                </button> --}}
+                        {{--                            </li> --}}
+                        {{--                            <li> --}}
+                        {{--                                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"> --}}
+                        {{--                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half fa-fw mode-switch me-1" viewBox="0 0 16 16"> --}}
+                        {{--                                        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/> --}}
+                        {{--                                        <use href="#"></use> --}}
+                        {{--                                    </svg>Auto --}}
+                        {{--                                </button> --}}
+                        {{--                            </li> --}}
+                        {{--                        </ul> --}}
+                        {{--                    </li> --}}
+                        <!-- Dark mode option END -->
+
+                        <!-- Schedule button -->
+                        <li class="nav-item ms-2 d-none d-sm-block">
+                            <a href="#"
+                                class="btn text-light btn-sm mb-0 rounded-3 py-2 py-md-3 py-lg-3 py-xl-3"
+                                style="    background: linear-gradient(to right, #7F39F8 0%, #543DE7 51%, #7F39F8 100%);"
+                                data-bs-toggle="offcanvas" data-bs-target="#scheduleCall"
+                                aria-controls="scheduleCall">
                                 <i class="bi bi-calendar-week text-light me-2 "></i>
                                 Launch Project</a>
                         </li>
+
+                        <!-- Responsive navbar toggler -->
+                        <li class="nav-item">
+                            <button class="navbar-toggler ms-sm-3 p-2" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-animation">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </button>
+                        </li>
                     </ul>
                 </div>
-                <!-- Main navbar END -->
-
-                <!-- Buttons -->
-                <ul class="nav align-items-center dropdown-hover ms-sm-2">
-                    <!-- Dark mode option START -->
-{{--                    <li class="nav-item dropdown dropdown-animation">--}}
-{{--                        <button class="btn btn-link mb-0 px-2 lh-1" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">--}}
-{{--                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"  class="bi bi-circle-half theme-icon-active fill-mode fa-fw" viewBox="0 0 16 16">--}}
-{{--                                <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>--}}
-{{--                                <use href="#"></use>--}}
-{{--                            </svg>--}}
-{{--                        </button>--}}
-
-{{--                        <ul class="dropdown-menu min-w-auto dropdown-menu-end" aria-labelledby="bd-theme">--}}
-{{--                            <li class="mb-1">--}}
-{{--                                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">--}}
-{{--                                    <svg width="16" height="16" fill="currentColor" class="bi bi-brightness-high-fill fa-fw mode-switch me-1" viewBox="0 0 16 16">--}}
-{{--                                        <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>--}}
-{{--                                        <use href="#"></use>--}}
-{{--                                    </svg>Light--}}
-{{--                                </button>--}}
-{{--                            </li>--}}
-{{--                            <li class="mb-1">--}}
-{{--                                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">--}}
-{{--                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars-fill fa-fw mode-switch me-1" viewBox="0 0 16 16">--}}
-{{--                                        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>--}}
-{{--                                        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>--}}
-{{--                                        <use href="#"></use>--}}
-{{--                                    </svg>Dark--}}
-{{--                                </button>--}}
-{{--                            </li>--}}
-{{--                            <li>--}}
-{{--                                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto">--}}
-{{--                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half fa-fw mode-switch me-1" viewBox="0 0 16 16">--}}
-{{--                                        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>--}}
-{{--                                        <use href="#"></use>--}}
-{{--                                    </svg>Auto--}}
-{{--                                </button>--}}
-{{--                            </li>--}}
-{{--                        </ul>--}}
-{{--                    </li>--}}
-                    <!-- Dark mode option END -->
-
-                    <!-- Schedule button -->
-                    <li class="nav-item ms-2 d-none d-sm-block">
-                        <a href="#" class="btn text-light btn-sm mb-0 rounded-3 py-2 py-md-3 py-lg-3 py-xl-3" style="    background: linear-gradient(to right, #7F39F8 0%, #543DE7 51%, #7F39F8 100%);" data-bs-toggle="offcanvas" data-bs-target="#scheduleCall" aria-controls="scheduleCall">
-                            <i class="bi bi-calendar-week text-light me-2 "></i>
-                            Launch Project</a>
-                    </li>
-
-                    <!-- Responsive navbar toggler -->
-                    <li class="nav-item">
-                        <button class="navbar-toggler ms-sm-3 p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-animation">
-								<span></span>
-								<span></span>
-								<span></span>
-							</span>
-                        </button>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- Logo Nav END -->
-    </header>
+            </nav>
+            <!-- Logo Nav END -->
+        </header>
+        <!-- Header END -->
+    </div>
     <!-- Header END -->
-</div>
-<!-- Header END -->
 
-<!-- **************** MAIN CONTENT START **************** -->
+    <!-- **************** MAIN CONTENT START **************** -->
 
 
-@yield('contant')
+    @yield('contant')
 
 
 
 
-<!-- =======================
+    <!-- =======================
 Footer START -->
-<footer class="bg-dark pt-8 pt-md-7 position-relative" data-bs-theme="dark">
+    <footer class="bg-dark pt-8 pt-md-7 position-relative" data-bs-theme="dark">
 
-    <div class="container">
-        <div class="row g-4 justify-content-between">
-            <!-- Widget 1 START -->
-            <div class="col-lg-4">
-                <!-- logo -->
-                <a href="{{ route('index') }}">
-                    <img class="h-40px" src="{{ asset('assets/images/codebeter horizontal logo-sm.png') }}" alt="logo">
-                </a>
+        <div class="container">
+            <div class="row g-4 justify-content-between">
+                <!-- Widget 1 START -->
+                <div class="col-lg-4">
+                    <!-- logo -->
+                    <a href="{{ route('index') }}">
+                        <img class="h-40px" src="{{ asset('assets/images/codebeter horizontal logo-sm.png') }}"
+                            alt="logo">
+                    </a>
 
-                <p class="my-3 my-lg-4">Some of the most advanced businesses in the world trust us. Use our web, mobile, e-commerce, and software development services to improve your company's profile.</p>
-                <!-- Social icon -->
-                <ul class="list-inline mb-0">
-                    <li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-secondary" target="_blank" href="https://www.facebook.com/profile.php?id=61577180078622"><i class="bi bi-facebook lh-base"></i></a> </li>
-{{--                    <li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-secondary" href="#"><i class="bi bi-instagram lh-base"></i></a> </li>--}}
-                    <li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-secondary" target="_blank" href="https://x.com/CodeBeter"><i class="bi bi-twitter-x lh-base"></i></a> </li>
-                    <li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-secondary" target="_blank" href="https://www.linkedin.com/in/hamza-javed-dev/"><i class="bi bi-linkedin lh-base"></i></a> </li>
-                </ul>
-            </div>
-            <!-- Widget 1 END -->
+                    <p class="my-3 my-lg-4">Some of the most advanced businesses in the world trust us. Use our web,
+                        mobile, e-commerce, and software development services to improve your company's profile.</p>
+                    <!-- Social icon -->
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-secondary" target="_blank"
+                                href="https://www.facebook.com/profile.php?id=61577180078622"><i
+                                    class="bi bi-facebook lh-base"></i></a> </li>
+                        {{--                    <li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-secondary" href="#"><i class="bi bi-instagram lh-base"></i></a> </li> --}}
+                        <li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-secondary" target="_blank"
+                                href="https://x.com/CodeBeter"><i class="bi bi-twitter-x lh-base"></i></a> </li>
+                        <li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-secondary" target="_blank"
+                                href="https://www.linkedin.com/in/hamza-javed-dev/"><i
+                                    class="bi bi-linkedin lh-base"></i></a> </li>
+                    </ul>
+                </div>
+                <!-- Widget 1 END -->
 
-            <!-- Widget 2 START -->
-            <div class="col-lg-6 col-xxl-4">
-                <div class="row g-4">
-                    <!-- Link block -->
-                    <div class="col-6">
-                        <h6 class="mb-3 mb-sm-4">Company</h6>
-                        <!-- Links -->
-                        <ul class="nav flex-column gap-1">
-                            <li class="nav-item"><a class="nav-link pt-0" href="{{ route('about') }}">About us</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact us</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('carrer') }}">Career <span class="badge bg-primary ms-2">2 jobs</span></a></li>
-{{--                            <li class="nav-item"><a class="nav-link" href="{{ route('') }}">Career detail</a></li>--}}
-{{--                            <li class="nav-item"><a class="nav-link" href="{{ route('') }}">Become a partner</a></li>--}}
-                            <li class="nav-item"><a class="nav-link pt-0" href="{{ route('portfolio') }}">Portfolio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('service') }}">Services</a></li>
-                        </ul>
+                <!-- Widget 2 START -->
+                <div class="col-lg-6 col-xxl-6">
+                    <div class="row g-4">
+                        <!-- Link block -->
+                        <div class="col-6">
+                            <h6 class="mb-3 mb-sm-4">Company</h6>
+                            <!-- Links -->
+                            <ul class="nav flex-column gap-1">
+                                <li class="nav-item"><a class="nav-link pt-0" href="{{ route('about') }}">About
+                                        us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact
+                                        us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('carrer') }}">Career <span
+                                            class="badge bg-primary ms-2">2 jobs</span></a></li>
+                                {{--                            <li class="nav-item"><a class="nav-link" href="{{ route('') }}">Career detail</a></li> --}}
+                                {{--                            <li class="nav-item"><a class="nav-link" href="{{ route('') }}">Become a partner</a></li> --}}
+                                <li class="nav-item"><a class="nav-link pt-0"
+                                        href="{{ route('portfolio') }}">Portfolio</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('service') }}">Services</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Link block -->
+                        <div class="col-6">
+                            <h6 class="mb-3 mb-sm-4">Services</h6>
+                            <!-- Links -->
+                            <ul class="nav flex-column gap-1">
+                                <li class="nav-item"><a class="nav-link pt-0" href="{{ route('services') }}">Website
+                                        Development</a></li>
+                                <li class="nav-item"><a class="nav-link pt-0" href="{{ route('services.api') }}">API
+                                        Development</a></li>
+                                <li class="nav-item"><a class="nav-link pt-0" href="{{ route('crm') }}">CRM</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link pt-0" href="{{ route('pos') }}">POS</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link pt-0"
+                                        href="{{ route('app.development') }}">Mobile App Development</a></li>
+                                {{--                            <li class="nav-item"><a class="nav-link" href="{{ route('pricing') }}">Pricing <span class="badge bg-success ms-2">New</span></a></li> --}}
+                                {{--                            <li class="nav-item"><a class="nav-link" href="">Blogs</a></li> --}}
+                                {{--                            <li class="nav-item"><a class="nav-link" href="">Blog detail</a></li> --}}
+                                {{--                            <li class="nav-item"><a class="nav-link" href="#">Success stories<i class="bi bi-box-arrow-up-right small ms-2"></i></a></li> --}}
+                            </ul>
+                        </div>
                     </div>
+                </div>
+                <!-- Widget 2 END -->
+            </div>
 
-                    <!-- Link block -->
-                    <div class="col-6">
-                        <h6 class="mb-3 mb-sm-4">Services</h6>
-                        <!-- Links -->
-                        <ul class="nav flex-column gap-1">
-                            <li class="nav-item"><a class="nav-link pt-0" href="{{ route('services') }}">Website Development</a></li>
-                            <li class="nav-item"><a class="nav-link pt-0" href="{{ route('services.api') }}">API Development</a></li>
-                            <li class="nav-item"><a class="nav-link pt-0" href="{{ route('crm') }}">CRM</a></li>
-                            <li class="nav-item"><a class="nav-link pt-0" href="{{ route('pos') }}">POS</a></li>
-                            <li class="nav-item"><a class="nav-link pt-0" href="{{ route('app.development') }}">Mobile App Development</a></li>
-{{--                            <li class="nav-item"><a class="nav-link" href="{{ route('pricing') }}">Pricing <span class="badge bg-success ms-2">New</span></a></li>--}}
-{{--                            <li class="nav-item"><a class="nav-link" href="">Blogs</a></li>--}}
-{{--                            <li class="nav-item"><a class="nav-link" href="">Blog detail</a></li>--}}
-{{--                            <li class="nav-item"><a class="nav-link" href="#">Success stories<i class="bi bi-box-arrow-up-right small ms-2"></i></a></li>--}}
-                        </ul>
+            <!-- Divider -->
+            <hr class="mt-xl-5 mb-0 opacity-1">
+
+            <!-- Bottom footer -->
+            <div class="d-md-flex justify-content-between align-items-center text-center text-lg-start py-4">
+                <!-- copyright text -->
+                <div class="text-body small mb-3 mb-md-0">© 2024 - {{ date('Y') }} CodeBeter. All Rights Reserved.
+                </div>
+
+                <!-- Policy link -->
+                {{--            <ul class="nav d-flex justify-content-center gap-1 mb-0"> --}}
+                {{--                <li class="nav-item"><a class="nav-link small py-0" href="#">Privacy policy</a></li> --}}
+                {{--                <li class="nav-item"><a class="nav-link small py-0 pe-0" href="#">Terms & conditions</a></li> --}}
+                {{--            </ul> --}}
+            </div>
+        </div>
+    </footer>
+    <!-- =======================
+Footer END -->
+
+    <!-- Schedule call offcanvas content START -->
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="scheduleCall"
+        aria-labelledby="scheduleCallLabel">
+        <div class="offcanvas-header">
+            <h6 class="offcanvas-title" id="scheduleCallLabel">Start your project</h6>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Form START -->
+            <form class="row g-3" action="{{ route('project.mail') }}" enctype="multipart/form-data"
+                method="POST">
+                @csrf
+                <div class="col-12">
+                    <label class="form-label">Full name *</label>
+                    <input type="text" name="fullname" class="form-control form-control-sm"
+                        placeholder="Full name">
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Email address *</label>
+                    <input type="email" name="email" class="form-control form-control-sm" id="floatingInput"
+                        placeholder="name@example.com">
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Address *</label>
+                    <textarea class="form-control" name="address" placeholder="Write your address here...." id="floatingTextarea2"
+                        style="height: 150px"></textarea>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Phone number *</label>
+                    <input type="text" name="phone_number" class="form-control form-control-sm"
+                        placeholder="(xxx) xx xxxx">
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Project Name *</label>
+                    <input type="text" name="project_name" class="form-control form-control-sm"
+                        placeholder="Write your project Name">
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Select Services *</label>
+                    <select class="form-control form-control-sm" name="services">
+                        <option class="">Select services</option>
+                        <option value="Website development">Website development</option>
+                        <option value="API integration">API integration</option>
+                        <option value="CRM">CRM</option>
+                        <option value="POS">POS</option>
+                        <option value="Support and maintenance">Support and maintenance</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
+                    </select>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Estimated Budget *</label>
+                    <input type="text" name="estimated_budget" class="form-control form-control-sm"
+                        placeholder="Write your Estimated Budget ">
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Project Description *</label>
+                    <textarea class="form-control" name="project_desc" placeholder="Write your message here...." id="floatingTextarea2"
+                        style="height: 150px"></textarea>
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Upload Your project details *</label>
+                    <input type="file" name="upload_pro_detail" class="form-control form-control-sm"
+                        placeholder="Write your project details">
+                </div>
+                <!-- Button -->
+                <button type="submit" class="btn btn-primary mb-0">Send a message</button>
+            </form>
+            <!-- Form END -->
+        </div>
+    </div>
+    <!-- Schedule call offcanvas content END -->
+
+    @if (session('success'))
+        <div id="successAlert" class="alert alert-success alert-dismissible fade show" role="alert"
+            style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; display: none;">
+            <i class="fa fa-check-circle"></i>
+            {{ session('success') }}
+            {{--        <button type="button" class="close" data-dismiss="alert" aria-label="Close"> --}}
+            {{--            <span aria-hidden="true">&times;</span> --}}
+            {{--        </button> --}}
+        </div>
+    @endif
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            @if (session('success'))
+                let alertBox = document.getElementById("successAlert");
+                alertBox.style.display = "block"; // Show immediately
+                setTimeout(function() {
+                    alertBox.style.display = "none"; // Hide after 5 seconds
+                }, 5000);
+            @endif
+        });
+    </script>
+
+
+
+
+    <!-- Cookie message -->
+    {{-- <div class="alert alert-secondary alert-dismissible fade show position-fixed bottom-0 start-50 translate-middle-x z-index-99 rounded-3 d-none d-md-flex justify-content-between align-items-center shadow px-3 py-2" role="alert"> --}}
+    {{--    <p class="heading-color fw-semibold mb-md-0">🍪 The website uses cookies to improve your web experience.</p> --}}
+    {{--    <a href="#" class="bg-success text-success bg-opacity-10 rounded-pill py-1 px-3 mb-0 ms-md-2" data-bs-dismiss="alert" aria-label="Close">Accept --}}
+    {{--    </a> --}}
+    {{-- </div> --}}
+
+    <!-- Back to top -->
+    <div class="back-top"></div>
+
+    <!-- customer support  -->
+    <div class="customer-support d-flex justify-content-center align-items-center" onclick="toggleChat()" style="cursor: pointer;"><i class="fa-regular fa-comment-dots"></i></div>
+
+<script>
+// Simple chat widget example
+document.addEventListener('DOMContentLoaded', function() {
+    // Create chat container (hidden by default)
+    const chatHTML = `
+        <div id="chat-widget" style="position:fixed;bottom:80px;right:20px;width:350px;height:400px;border:1px solid #ccc;border-radius:8px;background:white;box-shadow:0 4px 12px rgba(0,0,0,0.15);display:none;z-index:9999;">
+            <div style="background:linear-gradient(to right, #7F39F8 0%, #543DE7 51%, #7F39F8 100%);color:white;padding:15px;border-radius:8px 8px 0 0;display:flex;justify-content:space-between;align-items:center;">
+                <div>
+                    <h6 style="margin:0;font-size:16px;color:white;">Customer Support</h6> 
+                </div>
+                <button onclick="toggleChat()" style="background:none;border:none;color:white;font-size:16px;cursor:pointer;padding:0;line-height:1;">&times;</button>
+            </div>
+            <div id="chat-messages" style="height:280px;overflow-y:auto;padding:15px;background:#f8f9fa;">
+                <div style="text-align:left;margin:10px 0;">
+                    <div style="background:linear-gradient(to right, #7F39F8 0%, #543DE7 51%, #7F39F8 100%);color:white;padding:10px;border-radius:8px 8px 8px 0;max-width:80%;display:inline-block;font-size:13px;">
+                        👋 Hi! Welcome to Codebeter! I'm here to help you with any questions about our web development services. How can I assist you today?
                     </div>
                 </div>
             </div>
-            <!-- Widget 2 END -->
+            <div style="display:flex;padding:15px;border-top:1px solid #eee;background:white;border-radius:0 0 8px 8px;">
+                <input type="text" id="chat-input" style="flex:1;padding:10px;border:1px solid #ddd;border-radius:20px;outline:none;" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+                <button onclick="sendMessage()" style="margin-left:8px;padding:10px 15px;background:linear-gradient(to right, #7F39F8 0%, #543DE7 51%, #7F39F8 100%);color:white;border:none;border-radius:20px;cursor:pointer;">Send</button>
+            </div>
         </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', chatHTML);
+});
 
-        <!-- Divider -->
-        <hr class="mt-xl-5 mb-0 opacity-1">
+window.toggleChat = function() {
+    const chatWidget = document.getElementById('chat-widget');
+    if (chatWidget) {
+        chatWidget.style.display = chatWidget.style.display === 'none' ? 'block' : 'none';
+        
+        // Focus on input when opening
+        if (chatWidget.style.display === 'block') {
+            setTimeout(() => {
+                document.getElementById('chat-input').focus();
+            }, 100);
+        }
+    }
+};
 
-        <!-- Bottom footer -->
-        <div class="d-md-flex justify-content-between align-items-center text-center text-lg-start py-4">
-            <!-- copyright text -->
-            <div class="text-body small mb-3 mb-md-0"> Copyrights ©2025 CodeBeter</div>
+window.handleKeyPress = function(event) {
+    if (event.key === 'Enter') {
+        sendMessage();
+    }
+};
 
-            <!-- Policy link -->
-{{--            <ul class="nav d-flex justify-content-center gap-1 mb-0">--}}
-{{--                <li class="nav-item"><a class="nav-link small py-0" href="#">Privacy policy</a></li>--}}
-{{--                <li class="nav-item"><a class="nav-link small py-0 pe-0" href="#">Terms & conditions</a></li>--}}
-{{--            </ul>--}}
+window.sendMessage = function() {
+    const input = document.getElementById('chat-input');
+    const message = input.value.trim();
+    if (!message) return;
+
+    const messagesDiv = document.getElementById('chat-messages');
+    
+    // Add user message
+    messagesDiv.innerHTML += `
+        <div style="text-align:right;margin:10px 0;">
+            <div style="background:linear-gradient(to right, #7F39F8 0%, #543DE7 51%, #7F39F8 100%);color:white;padding:10px;border-radius:8px 8px 0 8px;max-width:80%;display:inline-block;font-size:13px;">
+                ${message}
+            </div>
         </div>
-    </div>
-</footer>
-<!-- =======================
-Footer END -->
+    `;
+    
+    input.value = '';
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
 
-<!-- Schedule call offcanvas content START -->
-<div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="scheduleCall" aria-labelledby="scheduleCallLabel">
-    <div class="offcanvas-header">
-        <h6 class="offcanvas-title" id="scheduleCallLabel">Start your project</h6>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-        <!-- Form START -->
-        <form class="row g-3" action="{{ route('project.mail') }}" enctype="multipart/form-data" method="POST">
-            @csrf
-            <div class="col-12">
-                <label class="form-label">Full name *</label>
-                <input type="text" name="fullname" class="form-control form-control-sm" placeholder="Full name">
+    // Show typing indicator
+    messagesDiv.innerHTML += `
+        <div id="typing-indicator" style="text-align:left;margin:10px 0;">
+            <div style="background:#e9ecef;padding:10px;border-radius:8px 8px 8px 0;max-width:80%;display:inline-block;">
+                <span style="color:#6c757d;">Typing...</span>
             </div>
+        </div>
+    `;
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
 
-            <div class="col-12">
-                <label class="form-label">Email address *</label>
-                <input type="email" name="email" class="form-control form-control-sm" id="floatingInput" placeholder="name@example.com">
+    // Send to server
+    fetch('/chat', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+        },
+        body: JSON.stringify({ message: message })
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Remove typing indicator
+        const typingIndicator = document.getElementById('typing-indicator');
+        if (typingIndicator) {
+            typingIndicator.remove();
+        }
+        
+        // Add bot response
+        messagesDiv.innerHTML += `
+            <div style="text-align:left;margin:10px 0;">
+                <div style="background:linear-gradient(to right, #7F39F8 0%, #543DE7 51%, #7F39F8 100%);color:white;padding:10px;border-radius:8px 8px 8px 0;max-width:80%;display:inline-block;">
+                    ${data.reply}
+                </div>
             </div>
-
-            <div class="col-12">
-                <label class="form-label">Address *</label>
-                <textarea class="form-control" name="address" placeholder="Write your address here...." id="floatingTextarea2" style="height: 150px"></textarea>
+        `;
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    })
+    .catch(error => {
+        // Remove typing indicator
+        const typingIndicator = document.getElementById('typing-indicator');
+        if (typingIndicator) {
+            typingIndicator.remove();
+        }
+        
+        // Add error message
+        messagesDiv.innerHTML += `
+            <div style="text-align:left;margin:10px 0;">
+                <div style="background:#dc3545;color:white;padding:10px;border-radius:8px 8px 8px 0;max-width:80%;display:inline-block;">
+                    Sorry, I'm having trouble connecting. Please try again or contact us directly.
+                </div>
             </div>
-
-            <div class="col-12">
-                <label class="form-label">Phone number *</label>
-                <input type="text" name="phone_number" class="form-control form-control-sm" placeholder="(xxx) xx xxxx">
-            </div>
-            <div class="col-12">
-                <label class="form-label">Project Name *</label>
-                <input type="text" name="project_name" class="form-control form-control-sm" placeholder="Write your project Name">
-            </div>
-            <div class="col-12">
-                <label class="form-label">Select Services *</label>
-                <select class="form-control form-control-sm" name="services">
-                    <option class="" >Select services</option>
-                    <option value="Website development">Website development</option>
-                    <option value="API integration">API integration</option>
-                    <option value="CRM">CRM</option>
-                    <option value="POS">POS</option>
-                    <option value="Support and maintenance">Support and maintenance</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                </select>
-            </div>
-
-            <div class="col-12">
-                <label class="form-label">Estimated Budget *</label>
-                <input type="text" name="estimated_budget" class="form-control form-control-sm" placeholder="Write your Estimated Budget ">
-            </div>
-
-            <div class="col-12">
-                <label class="form-label">Project Description *</label>
-                <textarea class="form-control" name="project_desc" placeholder="Write your message here...." id="floatingTextarea2" style="height: 150px"></textarea>
-            </div>
-            <div class="col-12">
-                <label class="form-label">Upload Your project details *</label>
-                <input type="file" name="upload_pro_detail" class="form-control form-control-sm" placeholder="Write your project details">
-            </div>
-            <!-- Button -->
-            <button type="submit" class="btn btn-primary mb-0">Send a message</button>
-        </form>
-        <!-- Form END -->
-    </div>
-</div>
-<!-- Schedule call offcanvas content END -->
-
-@if(session('success'))
-    <div id="successAlert"
-         class="alert alert-success alert-dismissible fade show"
-         role="alert"
-         style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; display: none;">
-        <i class="fa fa-check-circle"></i>
-        {{ session('success') }}
-{{--        <button type="button" class="close" data-dismiss="alert" aria-label="Close">--}}
-{{--            <span aria-hidden="true">&times;</span>--}}
-{{--        </button>--}}
-    </div>
-@endif
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        @if(session('success'))
-        let alertBox = document.getElementById("successAlert");
-        alertBox.style.display = "block"; // Show immediately
-        setTimeout(function () {
-            alertBox.style.display = "none"; // Hide after 5 seconds
-        }, 5000);
-        @endif
+        `;
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
     });
+};
 </script>
 
 
 
+    <!-- Bootstrap JS -->
+    <script src="{{ asset('assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
 
-<!-- Cookie message -->
-{{--<div class="alert alert-secondary alert-dismissible fade show position-fixed bottom-0 start-50 translate-middle-x z-index-99 rounded-3 d-none d-md-flex justify-content-between align-items-center shadow px-3 py-2" role="alert">--}}
-{{--    <p class="heading-color fw-semibold mb-md-0">🍪 The website uses cookies to improve your web experience.</p>--}}
-{{--    <a href="#" class="bg-success text-success bg-opacity-10 rounded-pill py-1 px-3 mb-0 ms-md-2" data-bs-dismiss="alert" aria-label="Close">Accept--}}
-{{--    </a>--}}
-{{--</div>--}}
+    <!--Vendors-->
+    <script src="{{ asset('assets/vendor/ityped/index.js') }}"></script>
+    <script src="{{ asset('assets/vendor/jarallax/jarallax.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/sticky-js/sticky.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/glightbox/js/glightbox.js') }}"></script>
+    <script src="{{ asset('assets/vendor/purecounterjs/dist/purecounter_vanilla.js') }}"></script>
 
-<!-- Back to top -->
-<div class="back-top"></div>
-
-<!-- Bootstrap JS -->
-<script src="{{ asset('assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
-
-<!--Vendors-->
-<script src="{{ asset('assets/vendor/ityped/index.js') }}"></script>
-<script src="{{ asset('assets/vendor/jarallax/jarallax.min.js') }}"></script>
-<script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
-<script src="{{ asset('assets/vendor/sticky-js/sticky.min.js') }}"></script>
-<script src="{{ asset('assets/vendor/glightbox/js/glightbox.js') }}"></script>
-<script src="{{ asset('assets/vendor/purecounterjs/dist/purecounter_vanilla.js') }}"></script>
-
-<!-- Theme Functions -->
-<script src="{{ asset('assets/js/functions.js') }}"></script>
+    <!-- Theme Functions -->
+    <script src="{{ asset('assets/js/functions.js') }}"></script>
 
 </body>
 

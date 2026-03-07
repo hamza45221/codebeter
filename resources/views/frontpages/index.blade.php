@@ -14,37 +14,37 @@ Hero START -->
             </div>
 
             <div class="container pt-4">
-                <div class="row">
+                <div class="row justify-content-center align-items-center">
                     <div class="col-md-6 pe-3">
                         <!-- Pre title -->
                         <p class="heading-color bg-secondary d-inline-block rounded px-3 py-2 mb-3"><span class="badge bg-dark me-2">New</span> {{ $main->tag_line }}</p>
 
                         <!-- Title -->
-                        <h1 class=" mb-4 " >{{ $main->hero_heading }}<br>
+                        <h2 class=" mb-4 " >{{ $main->hero_heading }}<br>
                             <span class="text-primary ityped-cursor-opacity mb-0 d-block d-xxl-inline-block">
 					<span class="typed" data-type-text="business&&agency&&startup"></span>
                         </span>
-                        </h1>
+                        </h2>
 
                         <!-- Button and info -->
-                        <div class="d-flex gap-3 gap-sm-4 flex-wrap">
+                        <div class="d-flex gap-2 gap-sm-3 flex-wrap">
                             <!-- Button -->
-                            <a href="https://wa.me/923291070012" class="btn btn-primary-grad px-3"> <i class="bi bi-whatsapp me-2"></i> {{ $main->whatsapp_num }} </a>
+                            <a href="https://wa.me/923291070012" class="btn btn-primary-grad px-2"> <i class="bi bi-whatsapp me-1"></i> {{ $main->whatsapp_num }} </a>
 
                             <!-- Info -->
                             <div class="d-flex gap-2 align-items-center">
                                 <ul class="avatar-group mb-0 align-items-center">
                                     <li class="avatar">
-                                        <img class="avatar-img rounded-circle" src="{{ asset('assets/images/client/huaman1.jpg') }}" alt="avatar">
+                                        <img class="avatar-img border rounded-circle" src="{{ asset('assets/images/client/huaman1.jpg') }}" alt="avatar">
                                     </li>
                                     <li class="avatar">
-                                        <img class="avatar-img rounded-circle" src="{{ asset('assets/images/client/human2.jpg') }}" alt="avatar">
+                                        <img class="avatar-img border rounded-circle" src="{{ asset('assets/images/client/human2.jpg') }}" alt="avatar">
                                     </li>
                                     <li class="avatar">
-                                        <img class="avatar-img rounded-circle" src="{{ asset('assets/images/client/human3.jpg') }}" alt="avatar">
+                                        <img class="avatar-img border rounded-circle" src="{{ asset('assets/images/client/human3.jfif') }}" alt="avatar">
                                     </li>
                                     <li class="avatar">
-                                        <img class="avatar-img rounded-circle" src="{{ asset('assets/images/client/human4.jpg') }}" alt="avatar">
+                                        <img class="avatar-img border rounded-circle" src="{{ asset('assets/images/client/human4.jfif') }}" alt="avatar">
                                     </li>
                                 </ul>
                                 <p class="heading-color mb-0">{{ $main->happy_clients }}</p>
@@ -53,7 +53,7 @@ Hero START -->
 
                     </div>
                     <div class="col-md-6">
-                        <div class="hero-video mt-5">
+                        <div class="hero-video shadow">
                             <video width="100%" class="rounded-3" height="100%"  muted autoplay="autoplay" loop>
                                 <source src="{{ asset($main->hero_video) }}" type="video/mp4">
                                 <source src="{{ asset($main->hero_video) }}" type="video/webm">
@@ -179,46 +179,7 @@ Image and client START -->
                                 </div>
                             </div>
                         </div>
-                        <!-- Image -->
-                        <div class="swiper-slide">
-                            <div class="swap-logo">
-                                <img src="assets/images/client/logo-gray/04.svg" alt="client-img">
-                                <div class="swap-item">
-                                    <img src="assets/images/client/logo-light/04.svg" class="dark-mode-item" alt="client logo">
-                                    <img src="assets/images/client/logo-dark/04.svg" class="light-mode-item" alt="client logo">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Image -->
-                        <div class="swiper-slide">
-                            <div class="swap-logo">
-                                <img src="assets/images/client/logo-gray/05.svg" alt="client-img">
-                                <div class="swap-item">
-                                    <img src="assets/images/client/logo-light/05.svg" class="dark-mode-item" alt="client logo">
-                                    <img src="assets/images/client/logo-dark/05.svg" class="light-mode-item" alt="client logo">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Image -->
-                        <div class="swiper-slide">
-                            <div class="swap-logo">
-                                <img src="assets/images/client/logo-gray/06.svg" alt="client-img">
-                                <div class="swap-item">
-                                    <img src="assets/images/client/logo-light/06.svg" class="dark-mode-item" alt="client logo">
-                                    <img src="assets/images/client/logo-dark/06.svg" class="light-mode-item" alt="client logo">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Image -->
-                        <div class="swiper-slide">
-                            <div class="swap-logo">
-                                <img src="assets/images/client/logo-gray/07.svg" alt="client-img">
-                                <div class="swap-item">
-                                    <img src="assets/images/client/logo-light/07.svg" class="dark-mode-item" alt="client logo">
-                                    <img src="assets/images/client/logo-dark/07.svg" class="light-mode-item" alt="client logo">
-                                </div>
-                            </div>
-                        </div>
+                        
                         <!-- Image -->
                         <div class="swiper-slide">
                             <div class="swap-logo">
@@ -418,8 +379,8 @@ About END -->
 
                 <div class="row g-4">
                     <!-- Project item -->
-                    @foreach($portfolio->take(4) as $port)
-                        <div class="col-md-6">
+                    @foreach($portfolio->take(6) as $port)
+                        <div class="col-md-4">
                             <div class="card shadow mt-2 rounded-4 card-img-scale card-content-hover rounded-0 bg-transparent overflow-hidden">
                                 <div class="card-img-scale-wrapper rounded-4 rounded-0">
                                     <img src="{{ asset($port->image) }}" class="img-scale" alt="portfolio-img">
@@ -435,7 +396,7 @@ About END -->
                                             <a href="{{ $port->link }}" target="_blank" class="heading-color stretched-link">{{ $port->name }}</a>
                                         </h6>
                                     </div>
-                                    <small>@ {{ $port->year }}</small>
+                                    <!-- <small>@ {{ $port->year }}</small> -->
                                 </div>
                             </div>
                         </div>
@@ -568,7 +529,8 @@ Testimonials START -->
                                         <li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
                                         <li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
                                         <li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="bi bi-star-half text-warning"></i></li>
+                                        <li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
+{{--                                        <li class="list-inline-item me-0"><i class="bi bi-star-half text-warning"></i></li>--}}
                                     </ul>
                                     <!-- Testimonials text -->
                                     <blockquote>
@@ -579,10 +541,10 @@ Testimonials START -->
                                 <div class="card-footer bg-transparent p-0">
                                     <!-- Testimonials info -->
                                     <div class="d-flex align-items-center">
-                                        <div class="avatar flex-shrink-0">
-                                            <img class="avatar-img rounded-circle" src="{{ asset($r->image) }}" alt="avatar">
-                                        </div>
-                                        <div class="ms-3">
+{{--                                        <div class="avatar flex-shrink-0">--}}
+{{--                                            <img class="avatar-img rounded-circle" src="{{ asset($r->image) }}" alt="avatar">--}}
+{{--                                        </div>--}}
+                                        <div class=" ">
                                             <p class="lead heading-color fw-semibold mb-0">{{ $r->name }}</p>
 {{--                                            <small>Product designer</small>--}}
                                         </div>
@@ -598,7 +560,11 @@ Testimonials START -->
                 </div>
                 <!-- Testimonials END -->
             </div>
+
+
         </section>
+
+
         <!-- =======================
 Testimonials END -->
 

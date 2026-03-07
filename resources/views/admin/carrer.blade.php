@@ -1,8 +1,5 @@
 @extends('layout.mainadmin')
 
-
-
-
 @section('content')
 
     <div class="row px-3">

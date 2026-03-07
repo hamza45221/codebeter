@@ -16,21 +16,24 @@ class GoogleAuthController extends Controller
     }
 
     public function authCallback(Request  $request){
+        try {
+            $googleUser  = Socialite::driver('google')->user();
+            
+            $user = User::updateOrCreate([
+                'google_id' => $googleUser->id,
+            ], [
+                'name' => $googleUser->name,
+                'email' => $googleUser->email,
+                'google_token' => $googleUser->token,
+                'google_refresh_token' => $googleUser->refreshToken,
+            ]);
 
+            Auth::login($user);
 
-        $googleUser  = Socialite::driver('google')->user();
-        dd($googleUser);
-        $user = User::updateOrCreate([
-            'google_id' => $googleUser->id,
-        ], [
-            'name' => $googleUser->name,
-            'email' => $googleUser->email,
-            'github_token' => $googleUser->token,
-            'github_refresh_token' => $googleUser->refreshToken,
-        ]);
-
-        Auth::login($user);
-
-        return redirect('/dashboard');
+            return redirect('/dashboard');
+        } catch (\Exception $e) {
+            \Log::error('Google auth error: ' . $e->getMessage());
+            return redirect('/login')->with('error', 'Authentication failed. Please try again.');
+        }
     }
 }

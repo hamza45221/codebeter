@@ -29,9 +29,10 @@ class JobFormMail extends Mailable
      */
     public function build()
     {
-        return $this->from($this->data['email'], $this->data['fullname'])
-            ->subject('New Job Application')
-            ->view('mail.job')
-            ->with(['data' => $this->data]);
+        return $this->from(env('MAIL_FROM_ADDRESS', 'info@codebeter.com'), $this->data['fullname'])
+        ->replyTo($this->data['email'], $this->data['fullname'])
+        ->subject('New Job Application')
+        ->view('mail.job')
+        ->with(['data' => $this->data]);
     }
 }

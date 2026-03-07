@@ -8,5 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class ContactMail extends Model
 {
     use HasFactory;
-    protected $guarded = [];
+    
+    protected $fillable = [
+        'name',
+        'email',
+        'client_want',
+        'project_detail',
+        'status',
+        'processed_at'
+    ];
 }

@@ -5634,6 +5634,26 @@ fieldset:disabled .btn {
     color: var(--bs-card-color);
 }
 
+.customer-support {
+    cursor: pointer;
+    position: fixed !important;
+    bottom: 40px;
+    right: 40px;
+    display: block;
+    z-index: 99; 
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: var(--bs-primary);
+    color: #fff;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    line-height: 52px;
+    text-align: center;
+}
+
 .card-title {
     margin-bottom: var(--bs-card-title-spacer-y);
     color: var(--bs-card-title-color);
@@ -21522,7 +21542,7 @@ small,
 .back-top {
     cursor: pointer;
     position: fixed !important;
-    bottom: 40px;
+    bottom: 70px;
     right: 40px;
     display: block;
     z-index: 99;
@@ -21534,9 +21554,9 @@ small,
     transition: all 0.3s ease-in-out;
     background: var(--bs-primary);
     color: #fff;
-    border-radius: 10%;
-    width: 52px;
-    height: 52px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
     line-height: 52px;
     text-align: center;
 }

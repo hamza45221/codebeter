@@ -19,7 +19,8 @@ class ProjectFormMail extends Mailable
 
     public function build()
     {
-        return $this->from($this->data['email'], $this->data['fullname'])
+        return $this->from(env('MAIL_FROM_ADDRESS', 'info@codebeter.com'), $this->data['fullname'])
+            ->replyTo($this->data['email'], $this->data['fullname'])
             ->subject('New Project Inquiry')
             ->view('mail.project')
             ->with(['data' => $this->data]);

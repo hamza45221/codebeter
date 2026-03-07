@@ -138,7 +138,7 @@
                         @endif
 
                         <p>Let's follow up with them to discuss this project further.</p>
-                        <p>All the best,<br>The [Your Company Name] Team</p>
+                        <p>All the best,<br>The Codebeter Team</p>
                     </td>
                 </tr>
             </table>
@@ -147,7 +147,7 @@
     <tr>
         <td class="footer-section">
             <p>This is an automated notification. If you have any questions, feel free to reply to this email.</p>
-            <p>&copy; 2024 Your Company. All rights reserved.</p>
+            <p>&copy; 2024 Codebeter. All rights reserved.</p>
         </td>
     </tr>
 </table>

@@ -113,22 +113,21 @@
                         <p>We're excited to let you know that a new user has just reached out. Here are their details—we thought you'd want to take a look!</p>
 
                         <div class="data-section">
-                            <p><strong>Name:</strong> [First Name] [Last Name]</p>
-                            <p><strong>Email:</strong> <a href="mailto:[User Email]" style="color:#4a90e2; text-decoration:none;">[User Email]</a></p>
+                            <p><strong>Name:</strong> {{ $data['name'] }}</p>
+                            <p><strong>Email:</strong> <a href="mailto:{{ $data['email'] }}" style="color:#4a90e2; text-decoration:none;">{{ $data['email'] }}</a></p>
                         </div>
 
                         <p><strong>Here is the user's message:</strong></p>
                         <div class="description-box">
-                            <p>[User Description or Message]</p>
+                            <p>{{ $data['project_detail'] }}</p>
                         </div>
 
-                        <div class="image-container">
-                            <p style="font-weight: bold; color: #34495e;">Submitted Image:</p>
-                            <img src="[Image URL]" alt="User submitted image" style="display: block;">
+                        <div class="data-section">
+                            <p><strong>Client Wants:</strong> {{ $data['client_want'] }}</p>
                         </div>
 
                         <p>Let's make sure we give them a warm welcome.</p>
-                        <p>All the best,<br>The [Your Company Name] Team</p>
+                        <p>All the best,<br>The Codebeter Team</p>
                     </td>
                 </tr>
             </table>
@@ -137,7 +136,7 @@
     <tr>
         <td class="footer-section">
             <p>This is an automated notification. If you have any questions, feel free to reply to this email.</p>
-            <p>&copy; 2024 Your Company. All rights reserved.</p>
+            <p>&copy; 2024 Codebeter. All rights reserved.</p>
         </td>
     </tr>
 </table>

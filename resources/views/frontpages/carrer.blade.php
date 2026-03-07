@@ -425,7 +425,7 @@ Job listing START -->
                                         <div class="modal-dialog modal-lg">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="applyJobModalLabel-{{ $j->id }}">Apply Job - {{ $j->title }}</h1>
+                                                    <h3 class="modal-title fs-" id="applyJobModalLabel-{{ $j->id }}">Apply Job - {{ $j->title }}</h3>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
 
@@ -455,10 +455,10 @@ Job listing START -->
                                                             <input type="text" name="phone_number" class="form-control form-control-sm" placeholder="(xx) xxx xxxxxxx" required>
                                                         </div>
 
-                                                        <div class="col-md-6">
-                                                            <label class="form-label">Country Name *</label>
-                                                            <input type="text" name="country" class="form-control form-control-sm" placeholder="Write your Country Name" required>
-                                                        </div>
+{{--                                                        <div class="col-md-6">--}}
+{{--                                                            <label class="form-label">Country Name *</label>--}}
+{{--                                                            <input type="text" name="country" class="form-control form-control-sm" placeholder="Write your Country Name" required>--}}
+{{--                                                        </div>--}}
 
 
 

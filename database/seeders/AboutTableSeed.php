@@ -19,7 +19,7 @@ class AboutTableSeed extends Seeder
         $about->title2 = 'Right Thing,';
         $about->title3 = 'at the';
         $about->title4 = 'Right Time';
-        $about->user_title = 'Including users on all of our 2024 platforms';
+        $about->user_title = 'Including users on all of our 2025 platforms';
         $about->user_count = '70';
         $about->project_title = 'Successful projects';
         $about->project_count = '50';

@@ -29,9 +29,10 @@ class ContactFormMail extends Mailable
      */
     public function build()
     {
-        return $this->from($this->data['email'], $this->data['name'])
-            ->subject('New Contact Form')
-            ->view('mail.contact')
-            ->with(['data' => $this->data]);
+        return $this->from(env('MAIL_FROM_ADDRESS', 'info@codebeter.com'), $this->data['name'])
+        ->replyTo($this->data['email'], $this->data['name'])
+        ->subject('New Contact Form Message')
+        ->view('mail.contact')
+        ->with(['data' => $this->data]);
     }
 }

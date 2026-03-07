@@ -9,5 +9,16 @@ class Portfolio extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    protected $fillable = [
+        'name',
+        'title',
+        'size',
+        'year',
+        'image',
+        'description',
+        'link',
+        'category',
+        'technologies',
+        'status'
+    ];
 }

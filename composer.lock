@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d284daf1438646c92427d011ff9ae827",
+    "content-hash": "53237599cb437580547e5e2e16ea6603",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3510,6 +3510,80 @@
                 }
             ],
             "time": "2021-09-25T23:10:38+00:00"
+        },
+        {
+            "name": "rumenx/php-chatbot",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RumenDamyanov/php-chatbot.git",
+                "reference": "df64a66c3b1cc6a41c8de499d5d3a657d43d657d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RumenDamyanov/php-chatbot/zipball/df64a66c3b1cc6a41c8de499d5d3a657d43d657d",
+                "reference": "df64a66c3b1cc6a41c8de499d5d3a657d43d657d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "pestphp/pest": "^2.0",
+                "phpstan/phpstan": "^1.10 || ^2.0",
+                "phpunit/phpunit": "^10.0",
+                "squizlabs/php_codesniffer": "^3.7 || ^4.0",
+                "symfony/config": "^7.3",
+                "symfony/dependency-injection": "^7.3",
+                "symfony/http-kernel": "^7.3",
+                "symfony/yaml": "^7.3"
+            },
+            "suggest": {
+                "guzzlehttp/guzzle": "^7.0 - Alternative HTTP client (instead of cURL)",
+                "monolog/monolog": "^3.0 - Recommended logger implementation",
+                "psr/log": "^3.0 - For PSR-3 compatible logging support"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Rumenx\\PhpChatbot\\Adapters\\Laravel\\PhpChatbotServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Rumenx\\PhpChatbot\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rumen Damyanov",
+                    "email": "contact@rumenx.com",
+                    "homepage": "https://rumenx.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A modern, framework-agnostic PHP package for adding customizable, AI-powered chat popups to any web application. Includes adapters for Laravel and Symfony, supports multiple AI providers, and is easy to extend.",
+            "homepage": "https://github.com/RumenDamyanov/php-chatbot",
+            "support": {
+                "issues": "https://github.com/RumenDamyanov/php-chatbot/issues",
+                "source": "https://github.com/RumenDamyanov/php-chatbot",
+                "wiki": "https://github.com/RumenDamyanov/php-chatbot/wiki"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/RumenDamyanov",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-12-16T21:23:09+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

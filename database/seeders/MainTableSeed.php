@@ -18,8 +18,8 @@ class MainTableSeed extends Seeder
         $data = new Main();
         $data->tag_line = 'Maximize productivity with next-generation software';
         $data->hero_heading = 'Building Reliable Website or Software That Drives your';
-        $data->happy_clients = '30+ happy clients';
-        $data->whatsapp_num = '03291070012';
+        $data->happy_clients = 'Happy Clients';
+        $data->whatsapp_num = '+92 329 1070012';
         $data->happy_clients_img = [
             ['image'=>'assets/images/client/huaman1.jpg'],
             ['image'=>'assets/images/client/human2.jpg'],
@@ -27,7 +27,7 @@ class MainTableSeed extends Seeder
             ['image'=>'assets/images/client/human4.jpg'],
         ];
 
-        $data->hero_video = 'assets/video/her-vid.mp4';
+        $data->hero_video = 'assets/video/codebeter-hero.mp4';
         $data->call_sec_person_img = 'assets/images/bg/02.jpg';
         $data->call_sec_code_img = 'assets/images/bg/code.jpg';
         $data->google_meet_link = 'https://meet.google.com/your-meeting-code';

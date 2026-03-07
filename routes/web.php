@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChatbotController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -89,8 +90,6 @@ Route::group(['prefix' => 'dashboard'], function () {
 
 
 
-
-
 Route::get('/', [\App\Http\Controllers\FrontPageController::class,'index'])->name('index');
 Route::get('/contact', [\App\Http\Controllers\FrontPageController::class,'contact'])->name('contact');
 Route::get('/error', [\App\Http\Controllers\FrontPageController::class,'error'])->name('error');
@@ -106,7 +105,6 @@ Route::get('/mobile-app-development', [\App\Http\Controllers\FrontPageController
 Route::get('/pos', [\App\Http\Controllers\FrontPageController::class,'pos'])->name('pos');
 Route::get('/crm', [\App\Http\Controllers\FrontPageController::class,'crm'])->name('crm');
 
-
 Route::get('/carrer', [\App\Http\Controllers\FrontPageController::class,'carrer'])->name('carrer');
 Route::get('/apply-jpb', [\App\Http\Controllers\FrontPageController::class,'applyJob'])->name('apply.job');
 Route::get('/team', [\App\Http\Controllers\FrontPageController::class,'team'])->name('team');
@@ -114,12 +112,14 @@ Route::get('/login', [\App\Http\Controllers\FrontPageController::class,'login'])
 Route::get('/auth/redirect', [\App\Http\Controllers\Auth\GoogleAuthController::class,'authRedirect'])->name('auth.redirect');
 Route::get('/auth/google/callback', [\App\Http\Controllers\Auth\GoogleAuthController::class,'authCallback'])->name('auth.callback');
 
-
-
 Route::post('/project-mail', [\App\Http\Controllers\MailController::class,'projectMail'])->name('project.mail');
 Route::post('/contact-mail', [\App\Http\Controllers\MailController::class,'contactMail'])->name('contact.mail');
 Route::post('/apply-job', [\App\Http\Controllers\MailController::class,'applyJob'])->name('applyjob.mail');
 
+Route::post('/chat', [ChatbotController::class, 'chat'])->name('chat');
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

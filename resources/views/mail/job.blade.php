@@ -97,8 +97,7 @@
                         <div class="data-section">
                             <p><strong>Full Name:</strong> {{ $data['fullname'] }}</p>
                             <p><strong>Email:</strong> <a href="mailto:{{ $data['email'] }}" style="color:#4a90e2; text-decoration:none;">{{ $data['email'] }}</a></p>
-                            <p><strong>Phone Number:</strong> {{ $data['phone_number'] }}</p>
-                            <p><strong>Country:</strong> {{ $data['country'] }}</p>
+                            <p><strong>Phone Number:</strong> {{ $data['phone_number'] }}</p> 
                             <p><strong>Address:</strong> {{ $data['address'] }}</p>
                         </div>
 
@@ -109,7 +108,7 @@
                         </div>
 
                         <p>Please review their application and follow up as needed.</p>
-                        <p>All the best,<br>The [Your Company Name] Team</p>
+                        <p>All the best,<br>The Codebeter Team</p>
                     </td>
                 </tr>
             </table>
@@ -118,7 +117,7 @@
     <tr>
         <td class="footer-section">
             <p>This is an automated notification. If you have any questions, feel free to reply to this email.</p>
-            <p>&copy; 2024 Your Company. All rights reserved.</p>
+            <p>&copy; 2024 Codebeter. All rights reserved.</p>
         </td>
     </tr>
 </table>

@@ -9,5 +9,17 @@ class ProjectMail extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    protected $fillable = [
+        'fullname',
+        'email',
+        'address',
+        'phone_number',
+        'project_name',
+        'services',
+        'estimated_budget',
+        'project_desc',
+        'upload_pro_detail',
+        'status',
+        'processed_at'
+    ];
 }
