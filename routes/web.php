@@ -109,6 +109,7 @@ Route::get('/carrer', [\App\Http\Controllers\FrontPageController::class,'carrer'
 Route::get('/apply-jpb', [\App\Http\Controllers\FrontPageController::class,'applyJob'])->name('apply.job');
 Route::get('/team', [\App\Http\Controllers\FrontPageController::class,'team'])->name('team');
 Route::get('/login', [\App\Http\Controllers\FrontPageController::class,'login'])->name('login');
+Route::get('/register', [\App\Http\Controllers\FrontPageController::class,'register'])->name('register');
 Route::get('/auth/redirect', [\App\Http\Controllers\Auth\GoogleAuthController::class,'authRedirect'])->name('auth.redirect');
 Route::get('/auth/google/callback', [\App\Http\Controllers\Auth\GoogleAuthController::class,'authCallback'])->name('auth.callback');
 

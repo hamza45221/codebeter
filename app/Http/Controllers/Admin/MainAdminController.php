@@ -3,13 +3,22 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\ApplicantMail;
 use App\Models\Main;
+use App\Models\ProjectMail;
+use App\Models\Team;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class MainAdminController extends Controller
 {
     public function index(){
-        return view('admin.dashboard');
+
+    $users = User::all()->count();
+    $applicant = ApplicantMail::all()->count();
+    $projMail = ProjectMail::all()->count();
+    $team = Team::all()->count();
+        return view('admin.dashboard',compact('users','applicant','projMail','team'));
     }
     public function main(){
         $main = Main::first();

@@ -108,4 +108,11 @@ class FrontPageController extends Controller
     {
         return view('frontpages.sign-in');
     }
+
+    
+
+    public function register()
+    {
+        return view('frontpages.sign-up');
+    }
 }

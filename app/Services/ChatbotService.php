@@ -72,10 +72,10 @@ class ChatbotService
         return "Perfect choice! Codebeter specializes in robust POS solutions that streamline business operations.
 
 **POS Solutions:**
-🏪 **Retail POS** - Inventory management, Sales analytics, Multi-store sync
-🍽️ **Restaurant POS** - Table management, Kitchen display, Delivery integration
-📱 **Modern Features** - Cloud-based, Mobile POS, Offline mode, Hardware integration
-🔧 **Custom Development** - Tailored solutions, ERP/CRM integration, API development
+ **Retail POS** - Inventory management, Sales analytics, Multi-store sync
+ **Restaurant POS** - Table management, Kitchen display, Delivery integration
+ **Modern Features** - Cloud-based, Mobile POS, Offline mode, Hardware integration
+ **Custom Development** - Tailored solutions, ERP/CRM integration, API development
 
 **Timeline:** 4-8 weeks | **Investment:** $5,000-$25,000+
 
@@ -98,10 +98,10 @@ Schedule a consultation with our POS specialists for your business needs!";
         return "Fantastic! Codebeter creates exceptional mobile applications with outstanding user experiences.
 
 **Mobile Development:**
-📱 **Native iOS** - Swift, iPhone/iPad apps, App Store submission, iOS features
-🤖 **Native Android** - Kotlin, Smartphone/tablet apps, Play Store deployment
-🔄 **Cross-Platform** - React Native, Flutter, Ionic, Xamarin, PWA
-🎨 **Features** - UI/UX design, Offline support, Push notifications, GPS, Camera
+ **Native iOS** - Swift, iPhone/iPad apps, App Store submission, iOS features
+ **Native Android** - Kotlin, Smartphone/tablet apps, Play Store deployment
+ **Cross-Platform** - React Native, Flutter, Ionic, Xamarin, PWA
+ **Features** - UI/UX design, Offline support, Push notifications, GPS, Camera
 
 **Process:** Strategy → Design → Development → Testing → Deployment → Maintenance
 
@@ -183,12 +183,12 @@ Discuss your mobile app idea with our specialists!";
 5+ years experience, 25+ developers, 200+ successful projects
 
 **Our Services:**
-🌐 **Web Development** - Custom websites, E-commerce, Web apps, PWAs
-📱 **Mobile Apps** - iOS & Android native, Cross-platform solutions
-🔌 **API & Backend** - RESTful/GraphQL APIs, Payment integrations
-💳 **POS Systems** - Retail & Restaurant POS, Inventory management
-🎯 **CRM Solutions** - Sales & marketing CRM, Customer service platforms
-🛡️ **Support & Maintenance** - 24/7 technical support, Security updates
+ **Web Development** - Custom websites, E-commerce, Web apps, PWAs
+**Mobile Apps** - iOS & Android native, Cross-platform solutions
+ **API & Backend** - RESTful/GraphQL APIs, Payment integrations
+ **POS Systems** - Retail & Restaurant POS, Inventory management
+**CRM Solutions** - Sales & marketing CRM, Customer service platforms
+ **Support & Maintenance** - 24/7 technical support, Security updates
 
 **Investment:** $2,000 - $100,000+ | **Timeline:** 2 weeks - 6 months
 

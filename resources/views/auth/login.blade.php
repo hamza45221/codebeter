@@ -109,7 +109,7 @@
                     <div class="card card-body bg-body bg-opacity-25 bg-blur border border-white border-opacity-10 position-relative rounded-4 shadow-primary text-center p-4 p-sm-5">
                         <!-- Title -->
                         <h1 class="mb-2 h3 fw-bold">Sign in</h1>
-                        <p class="mb-0">Don't have an account?<a href="sign-up.html" class="text-primary-grad"> Click here to sign up</a></p>
+                        <p class="mb-0">Don't have an account?<a href="{{ route('register') }}" class="text-primary-grad"> Click here to sign up</a></p>
                         <!-- Form START -->
                         <form class="mt-2 mt-sm-4" method="POST" action="{{ route('login') }}">
                             @csrf

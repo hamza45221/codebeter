@@ -21,10 +21,10 @@
                                 <h4 class="mb-0"></h4>
                             </div>
                             <h5 class="mb-1">Total Users</h5>
-                            {{--                            <p class="mb-0">--}}
-                            {{--                                <span class="text-heading fw-medium me-2">-8.7%</span>--}}
+                                                     <p class="mb-0">
+                                                          <span class="text-heading fw-medium me-2">{{ $users }}</span>
                             {{--                                <small class="text-muted">than last week</small>--}}
-                            {{--                            </p>--}}
+                                                   </p>
                         </div>
                     </div>
                 </div>
@@ -40,10 +40,10 @@
                                 <h4 class="mb-0"></h4>
                             </div>
                             <h5 class="mb-1">Applicants mails</h5>
-                            {{--                            <p class="mb-0">--}}
-                            {{--                                <span class="text-heading fw-medium me-2">+18.2%</span>--}}
+                                                     <p class="mb-0">
+                                                         <span class="text-heading fw-medium me-2">{{ $applicant }}</span>
                             {{--                                <small class="text-muted">than last week</small>--}}
-                            {{--                            </p>--}}
+                                                    </p>
                         </div>
                     </div>
                 </div>
@@ -60,10 +60,10 @@
                                 <h4 class="mb-0"></h4>
                             </div>
                             <h5 class="mb-1">Projects mails</h5>
-                            {{--                            <p class="mb-0">--}}
-                            {{--                                <span class="text-heading fw-medium me-2">+4.3%</span>--}}
+                                                  <p class="mb-0">
+                                                   <span class="text-heading fw-medium me-2">{{ $projMail }}</span>
                             {{--                                <small class="text-muted">than last week</small>--}}
-                            {{--                            </p>--}}
+                                                      </p>
                         </div>
                     </div>
                 </div>
@@ -78,11 +78,11 @@
                                 </div>
                                 <h4 class="mb-0"></h4>
                             </div>
-                            <h5 class="mb-1">Employee</h5>
-                            {{--                            <p class="mb-0">--}}
-                            {{--                                <span class="text-heading fw-medium me-2">-2.5%</span>--}}
+                            <h5 class="mb-1">Team Members</h5>
+                                         <p class="mb-0">
+                                                       <span class="text-heading fw-medium me-2">{{ $team }}</span>
                             {{--                                <small class="text-muted">than last week</small>--}}
-                            {{--                            </p>--}}
+                                               </p>
                         </div>
                     </div>
                 </div>
